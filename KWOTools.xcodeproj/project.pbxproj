@@ -38,6 +38,7 @@
 		264AEB611D17EAEB00F410E1 /* PhoneDialer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264AEB421D17EAEB00F410E1 /* PhoneDialer.swift */; };
 		264AEB621D17EAEB00F410E1 /* EmptySegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264AEB441D17EAEB00F410E1 /* EmptySegue.swift */; };
 		264AEB631D17EAEB00F410E1 /* KWOConfigurableReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264AEB461D17EAEB00F410E1 /* KWOConfigurableReusableView.swift */; };
+		2676A3541D195B73009997E2 /* ResizableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2676A3531D195B73009997E2 /* ResizableViewDataSource.swift */; };
 		BCF997C32EE53F3B959B815A /* Pods_KWOTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3C4733BC49D606F808BF664 /* Pods_KWOTools.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +77,7 @@
 		264AEB421D17EAEB00F410E1 /* PhoneDialer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneDialer.swift; sourceTree = "<group>"; };
 		264AEB441D17EAEB00F410E1 /* EmptySegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptySegue.swift; sourceTree = "<group>"; };
 		264AEB461D17EAEB00F410E1 /* KWOConfigurableReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KWOConfigurableReusableView.swift; sourceTree = "<group>"; };
+		2676A3531D195B73009997E2 /* ResizableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResizableViewDataSource.swift; sourceTree = "<group>"; };
 		5220A11A7209F1051922DE0C /* Pods-KWOTools.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KWOTools.release.xcconfig"; path = "Pods/Target Support Files/Pods-KWOTools/Pods-KWOTools.release.xcconfig"; sourceTree = "<group>"; };
 		E3C4733BC49D606F808BF664 /* Pods_KWOTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KWOTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -196,6 +198,7 @@
 		264AEB331D17EAEB00F410E1 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				2676A3521D195B46009997E2 /* Protocols */,
 				264AEB341D17EAEB00F410E1 /* Controls */,
 				264AEB361D17EAEB00F410E1 /* DataSources */,
 				264AEB3A1D17EAEB00F410E1 /* Extensions */,
@@ -259,6 +262,14 @@
 				264AEB461D17EAEB00F410E1 /* KWOConfigurableReusableView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		2676A3521D195B46009997E2 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				2676A3531D195B73009997E2 /* ResizableViewDataSource.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		51CB52F9BCCDE73286F813CA /* Pods */ = {
@@ -409,6 +420,7 @@
 				264AEB551D17EAEB00F410E1 /* AppInitializer.swift in Sources */,
 				264AEB4F1D17EAEB00F410E1 /* NSDate+KWO.swift in Sources */,
 				264AEB471D17EAEB00F410E1 /* Speaker.swift in Sources */,
+				2676A3541D195B73009997E2 /* ResizableViewDataSource.swift in Sources */,
 				264AEB491D17EAEB00F410E1 /* KWOCLLocationDistance+KWO.swift in Sources */,
 				264AEB581D17EAEB00F410E1 /* CollectionViewDataSource.swift in Sources */,
 				264AEB611D17EAEB00F410E1 /* PhoneDialer.swift in Sources */,
