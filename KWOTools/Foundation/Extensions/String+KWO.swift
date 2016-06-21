@@ -58,3 +58,12 @@ extension String {
         return self.stringByReplacingOccurrencesOfString("\n\n", withString: "\n")
     }
 }
+
+extension NSAttributedString {
+    public func kwo_size(constrainedToWidth width: CGFloat, inset: CGSize = CGSize.zero) -> CGSize {
+        let options: NSStringDrawingOptions = [.UsesLineFragmentOrigin]
+        let rect = self.boundingRectWithSize(CGSize(width: width - (inset.width * 2), height: CGFloat.max), options: options, context: nil)
+
+        return CGSize(width: rect.width, height: rect.height + (inset.height * 2))
+    }
+}
