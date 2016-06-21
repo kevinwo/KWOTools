@@ -7,13 +7,77 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		264A4BAB1D17EE7E008866B0 /* KWOTools.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 264A4BAA1D17EE7E008866B0 /* KWOTools.podspec */; };
 		264AEB141D17E8DB00F410E1 /* KWOTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 264AEB131D17E8DB00F410E1 /* KWOTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		264AEB471D17EAEB00F410E1 /* Speaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264AEB1D1D17EAEB00F410E1 /* Speaker.swift */; };
+		264AEB481D17EAEB00F410E1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264AEB1E1D17EAEB00F410E1 /* Constants.swift */; };
+		264AEB491D17EAEB00F410E1 /* KWOCLLocationDistance+KWO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264AEB201D17EAEB00F410E1 /* KWOCLLocationDistance+KWO.swift */; };
+		264AEB4A1D17EAEB00F410E1 /* KWOLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264AEB211D17EAEB00F410E1 /* KWOLocationManager.swift */; };
+		264AEB4B1D17EAEB00F410E1 /* FoursquareVenue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264AEB241D17EAEB00F410E1 /* FoursquareVenue.swift */; };
+		264AEB4C1D17EAEB00F410E1 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264AEB251D17EAEB00F410E1 /* Presenter.swift */; };
+		264AEB4D1D17EAEB00F410E1 /* Stopwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264AEB261D17EAEB00F410E1 /* Stopwatch.swift */; };
+		264AEB4E1D17EAEB00F410E1 /* Dictionary+KWO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264AEB281D17EAEB00F410E1 /* Dictionary+KWO.swift */; };
+		264AEB4F1D17EAEB00F410E1 /* NSDate+KWO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264AEB291D17EAEB00F410E1 /* NSDate+KWO.swift */; };
+		264AEB501D17EAEB00F410E1 /* NSError+KWO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264AEB2A1D17EAEB00F410E1 /* NSError+KWO.swift */; };
+		264AEB511D17EAEB00F410E1 /* NSIndexSet+KWO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264AEB2B1D17EAEB00F410E1 /* NSIndexSet+KWO.swift */; };
+		264AEB521D17EAEB00F410E1 /* NSObject+KWO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264AEB2C1D17EAEB00F410E1 /* NSObject+KWO.swift */; };
+		264AEB531D17EAEB00F410E1 /* String+KWO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264AEB2D1D17EAEB00F410E1 /* String+KWO.swift */; };
+		264AEB541D17EAEB00F410E1 /* FoursquareService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264AEB2F1D17EAEB00F410E1 /* FoursquareService.swift */; };
+		264AEB551D17EAEB00F410E1 /* AppInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264AEB311D17EAEB00F410E1 /* AppInitializer.swift */; };
+		264AEB561D17EAEB00F410E1 /* Sectionable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264AEB321D17EAEB00F410E1 /* Sectionable.swift */; };
+		264AEB571D17EAEB00F410E1 /* KWOSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264AEB351D17EAEB00F410E1 /* KWOSegmentedControl.swift */; };
+		264AEB581D17EAEB00F410E1 /* CollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264AEB371D17EAEB00F410E1 /* CollectionViewDataSource.swift */; };
+		264AEB591D17EAEB00F410E1 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264AEB381D17EAEB00F410E1 /* DataSource.swift */; };
+		264AEB5A1D17EAEB00F410E1 /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264AEB391D17EAEB00F410E1 /* TableViewDataSource.swift */; };
+		264AEB5B1D17EAEB00F410E1 /* UIAlertController+KWO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264AEB3B1D17EAEB00F410E1 /* UIAlertController+KWO.swift */; };
+		264AEB5C1D17EAEB00F410E1 /* UIApplication+KWO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264AEB3C1D17EAEB00F410E1 /* UIApplication+KWO.swift */; };
+		264AEB5D1D17EAEB00F410E1 /* UIBarButtonItem+KWO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264AEB3D1D17EAEB00F410E1 /* UIBarButtonItem+KWO.swift */; };
+		264AEB5E1D17EAEB00F410E1 /* UIFont+KWO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264AEB3E1D17EAEB00F410E1 /* UIFont+KWO.swift */; };
+		264AEB5F1D17EAEB00F410E1 /* UITraitCollection+KWO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264AEB3F1D17EAEB00F410E1 /* UITraitCollection+KWO.swift */; };
+		264AEB601D17EAEB00F410E1 /* Mailer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264AEB411D17EAEB00F410E1 /* Mailer.swift */; };
+		264AEB611D17EAEB00F410E1 /* PhoneDialer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264AEB421D17EAEB00F410E1 /* PhoneDialer.swift */; };
+		264AEB621D17EAEB00F410E1 /* EmptySegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264AEB441D17EAEB00F410E1 /* EmptySegue.swift */; };
+		264AEB631D17EAEB00F410E1 /* KWOConfigurableReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264AEB461D17EAEB00F410E1 /* KWOConfigurableReusableView.swift */; };
+		BCF997C32EE53F3B959B815A /* Pods_KWOTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3C4733BC49D606F808BF664 /* Pods_KWOTools.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		254778B4AC31363F879751AB /* Pods-KWOTools.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KWOTools.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KWOTools/Pods-KWOTools.debug.xcconfig"; sourceTree = "<group>"; };
+		264A4BAA1D17EE7E008866B0 /* KWOTools.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = KWOTools.podspec; sourceTree = "<group>"; };
 		264AEB101D17E8DB00F410E1 /* KWOTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KWOTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		264AEB131D17E8DB00F410E1 /* KWOTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KWOTools.h; sourceTree = "<group>"; };
 		264AEB151D17E8DB00F410E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		264AEB1D1D17EAEB00F410E1 /* Speaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Speaker.swift; sourceTree = "<group>"; };
+		264AEB1E1D17EAEB00F410E1 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		264AEB201D17EAEB00F410E1 /* KWOCLLocationDistance+KWO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "KWOCLLocationDistance+KWO.swift"; sourceTree = "<group>"; };
+		264AEB211D17EAEB00F410E1 /* KWOLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KWOLocationManager.swift; sourceTree = "<group>"; };
+		264AEB241D17EAEB00F410E1 /* FoursquareVenue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareVenue.swift; sourceTree = "<group>"; };
+		264AEB251D17EAEB00F410E1 /* Presenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		264AEB261D17EAEB00F410E1 /* Stopwatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stopwatch.swift; sourceTree = "<group>"; };
+		264AEB281D17EAEB00F410E1 /* Dictionary+KWO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+KWO.swift"; sourceTree = "<group>"; };
+		264AEB291D17EAEB00F410E1 /* NSDate+KWO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+KWO.swift"; sourceTree = "<group>"; };
+		264AEB2A1D17EAEB00F410E1 /* NSError+KWO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSError+KWO.swift"; sourceTree = "<group>"; };
+		264AEB2B1D17EAEB00F410E1 /* NSIndexSet+KWO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSIndexSet+KWO.swift"; sourceTree = "<group>"; };
+		264AEB2C1D17EAEB00F410E1 /* NSObject+KWO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+KWO.swift"; sourceTree = "<group>"; };
+		264AEB2D1D17EAEB00F410E1 /* String+KWO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+KWO.swift"; sourceTree = "<group>"; };
+		264AEB2F1D17EAEB00F410E1 /* FoursquareService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareService.swift; sourceTree = "<group>"; };
+		264AEB311D17EAEB00F410E1 /* AppInitializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppInitializer.swift; sourceTree = "<group>"; };
+		264AEB321D17EAEB00F410E1 /* Sectionable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sectionable.swift; sourceTree = "<group>"; };
+		264AEB351D17EAEB00F410E1 /* KWOSegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KWOSegmentedControl.swift; sourceTree = "<group>"; };
+		264AEB371D17EAEB00F410E1 /* CollectionViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewDataSource.swift; sourceTree = "<group>"; };
+		264AEB381D17EAEB00F410E1 /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
+		264AEB391D17EAEB00F410E1 /* TableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
+		264AEB3B1D17EAEB00F410E1 /* UIAlertController+KWO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+KWO.swift"; sourceTree = "<group>"; };
+		264AEB3C1D17EAEB00F410E1 /* UIApplication+KWO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+KWO.swift"; sourceTree = "<group>"; };
+		264AEB3D1D17EAEB00F410E1 /* UIBarButtonItem+KWO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+KWO.swift"; sourceTree = "<group>"; };
+		264AEB3E1D17EAEB00F410E1 /* UIFont+KWO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+KWO.swift"; sourceTree = "<group>"; };
+		264AEB3F1D17EAEB00F410E1 /* UITraitCollection+KWO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITraitCollection+KWO.swift"; sourceTree = "<group>"; };
+		264AEB411D17EAEB00F410E1 /* Mailer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mailer.swift; sourceTree = "<group>"; };
+		264AEB421D17EAEB00F410E1 /* PhoneDialer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneDialer.swift; sourceTree = "<group>"; };
+		264AEB441D17EAEB00F410E1 /* EmptySegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptySegue.swift; sourceTree = "<group>"; };
+		264AEB461D17EAEB00F410E1 /* KWOConfigurableReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KWOConfigurableReusableView.swift; sourceTree = "<group>"; };
+		5220A11A7209F1051922DE0C /* Pods-KWOTools.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KWOTools.release.xcconfig"; path = "Pods/Target Support Files/Pods-KWOTools/Pods-KWOTools.release.xcconfig"; sourceTree = "<group>"; };
+		E3C4733BC49D606F808BF664 /* Pods_KWOTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KWOTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -21,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCF997C32EE53F3B959B815A /* Pods_KWOTools.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -30,8 +95,11 @@
 		264AEB061D17E8DA00F410E1 = {
 			isa = PBXGroup;
 			children = (
+				264A4BAA1D17EE7E008866B0 /* KWOTools.podspec */,
 				264AEB121D17E8DB00F410E1 /* KWOTools */,
 				264AEB111D17E8DB00F410E1 /* Products */,
+				51CB52F9BCCDE73286F813CA /* Pods */,
+				944021ED2EC236A676E076FD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -48,8 +116,166 @@
 			children = (
 				264AEB131D17E8DB00F410E1 /* KWOTools.h */,
 				264AEB151D17E8DB00F410E1 /* Info.plist */,
+				264AEB1C1D17EAEB00F410E1 /* AVFoundation */,
+				264AEB1E1D17EAEB00F410E1 /* Constants.swift */,
+				264AEB1F1D17EAEB00F410E1 /* CoreLocation */,
+				264AEB221D17EAEB00F410E1 /* Foundation */,
+				264AEB331D17EAEB00F410E1 /* UIKit */,
 			);
 			path = KWOTools;
+			sourceTree = "<group>";
+		};
+		264AEB1C1D17EAEB00F410E1 /* AVFoundation */ = {
+			isa = PBXGroup;
+			children = (
+				264AEB1D1D17EAEB00F410E1 /* Speaker.swift */,
+			);
+			path = AVFoundation;
+			sourceTree = "<group>";
+		};
+		264AEB1F1D17EAEB00F410E1 /* CoreLocation */ = {
+			isa = PBXGroup;
+			children = (
+				264AEB201D17EAEB00F410E1 /* KWOCLLocationDistance+KWO.swift */,
+				264AEB211D17EAEB00F410E1 /* KWOLocationManager.swift */,
+			);
+			path = CoreLocation;
+			sourceTree = "<group>";
+		};
+		264AEB221D17EAEB00F410E1 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				264AEB231D17EAEB00F410E1 /* Classes */,
+				264AEB271D17EAEB00F410E1 /* Extensions */,
+				264AEB2E1D17EAEB00F410E1 /* Interfaces */,
+				264AEB301D17EAEB00F410E1 /* Protocols */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		264AEB231D17EAEB00F410E1 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				264AEB241D17EAEB00F410E1 /* FoursquareVenue.swift */,
+				264AEB251D17EAEB00F410E1 /* Presenter.swift */,
+				264AEB261D17EAEB00F410E1 /* Stopwatch.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		264AEB271D17EAEB00F410E1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				264AEB281D17EAEB00F410E1 /* Dictionary+KWO.swift */,
+				264AEB291D17EAEB00F410E1 /* NSDate+KWO.swift */,
+				264AEB2A1D17EAEB00F410E1 /* NSError+KWO.swift */,
+				264AEB2B1D17EAEB00F410E1 /* NSIndexSet+KWO.swift */,
+				264AEB2C1D17EAEB00F410E1 /* NSObject+KWO.swift */,
+				264AEB2D1D17EAEB00F410E1 /* String+KWO.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		264AEB2E1D17EAEB00F410E1 /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				264AEB2F1D17EAEB00F410E1 /* FoursquareService.swift */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		264AEB301D17EAEB00F410E1 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				264AEB311D17EAEB00F410E1 /* AppInitializer.swift */,
+				264AEB321D17EAEB00F410E1 /* Sectionable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		264AEB331D17EAEB00F410E1 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				264AEB341D17EAEB00F410E1 /* Controls */,
+				264AEB361D17EAEB00F410E1 /* DataSources */,
+				264AEB3A1D17EAEB00F410E1 /* Extensions */,
+				264AEB401D17EAEB00F410E1 /* Interfaces */,
+				264AEB431D17EAEB00F410E1 /* Segues */,
+				264AEB451D17EAEB00F410E1 /* Views */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		264AEB341D17EAEB00F410E1 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				264AEB351D17EAEB00F410E1 /* KWOSegmentedControl.swift */,
+			);
+			path = Controls;
+			sourceTree = "<group>";
+		};
+		264AEB361D17EAEB00F410E1 /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				264AEB371D17EAEB00F410E1 /* CollectionViewDataSource.swift */,
+				264AEB381D17EAEB00F410E1 /* DataSource.swift */,
+				264AEB391D17EAEB00F410E1 /* TableViewDataSource.swift */,
+			);
+			path = DataSources;
+			sourceTree = "<group>";
+		};
+		264AEB3A1D17EAEB00F410E1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				264AEB3B1D17EAEB00F410E1 /* UIAlertController+KWO.swift */,
+				264AEB3C1D17EAEB00F410E1 /* UIApplication+KWO.swift */,
+				264AEB3D1D17EAEB00F410E1 /* UIBarButtonItem+KWO.swift */,
+				264AEB3E1D17EAEB00F410E1 /* UIFont+KWO.swift */,
+				264AEB3F1D17EAEB00F410E1 /* UITraitCollection+KWO.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		264AEB401D17EAEB00F410E1 /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				264AEB411D17EAEB00F410E1 /* Mailer.swift */,
+				264AEB421D17EAEB00F410E1 /* PhoneDialer.swift */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		264AEB431D17EAEB00F410E1 /* Segues */ = {
+			isa = PBXGroup;
+			children = (
+				264AEB441D17EAEB00F410E1 /* EmptySegue.swift */,
+			);
+			path = Segues;
+			sourceTree = "<group>";
+		};
+		264AEB451D17EAEB00F410E1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				264AEB461D17EAEB00F410E1 /* KWOConfigurableReusableView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		51CB52F9BCCDE73286F813CA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				254778B4AC31363F879751AB /* Pods-KWOTools.debug.xcconfig */,
+				5220A11A7209F1051922DE0C /* Pods-KWOTools.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		944021ED2EC236A676E076FD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E3C4733BC49D606F808BF664 /* Pods_KWOTools.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -70,10 +296,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 264AEB181D17E8DB00F410E1 /* Build configuration list for PBXNativeTarget "KWOTools" */;
 			buildPhases = (
+				5D4956DCCF8DB933C4595395 /* [CP] Check Pods Manifest.lock */,
 				264AEB0B1D17E8DB00F410E1 /* Sources */,
 				264AEB0C1D17E8DB00F410E1 /* Frameworks */,
 				264AEB0D1D17E8DB00F410E1 /* Headers */,
 				264AEB0E1D17E8DB00F410E1 /* Resources */,
+				FF6118E2683CF14447183B68 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -120,16 +348,79 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				264A4BAB1D17EE7E008866B0 /* KWOTools.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5D4956DCCF8DB933C4595395 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FF6118E2683CF14447183B68 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KWOTools/Pods-KWOTools-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		264AEB0B1D17E8DB00F410E1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				264AEB4C1D17EAEB00F410E1 /* Presenter.swift in Sources */,
+				264AEB4E1D17EAEB00F410E1 /* Dictionary+KWO.swift in Sources */,
+				264AEB511D17EAEB00F410E1 /* NSIndexSet+KWO.swift in Sources */,
+				264AEB621D17EAEB00F410E1 /* EmptySegue.swift in Sources */,
+				264AEB4A1D17EAEB00F410E1 /* KWOLocationManager.swift in Sources */,
+				264AEB5B1D17EAEB00F410E1 /* UIAlertController+KWO.swift in Sources */,
+				264AEB531D17EAEB00F410E1 /* String+KWO.swift in Sources */,
+				264AEB571D17EAEB00F410E1 /* KWOSegmentedControl.swift in Sources */,
+				264AEB5F1D17EAEB00F410E1 /* UITraitCollection+KWO.swift in Sources */,
+				264AEB5A1D17EAEB00F410E1 /* TableViewDataSource.swift in Sources */,
+				264AEB591D17EAEB00F410E1 /* DataSource.swift in Sources */,
+				264AEB561D17EAEB00F410E1 /* Sectionable.swift in Sources */,
+				264AEB501D17EAEB00F410E1 /* NSError+KWO.swift in Sources */,
+				264AEB4B1D17EAEB00F410E1 /* FoursquareVenue.swift in Sources */,
+				264AEB551D17EAEB00F410E1 /* AppInitializer.swift in Sources */,
+				264AEB4F1D17EAEB00F410E1 /* NSDate+KWO.swift in Sources */,
+				264AEB471D17EAEB00F410E1 /* Speaker.swift in Sources */,
+				264AEB491D17EAEB00F410E1 /* KWOCLLocationDistance+KWO.swift in Sources */,
+				264AEB581D17EAEB00F410E1 /* CollectionViewDataSource.swift in Sources */,
+				264AEB611D17EAEB00F410E1 /* PhoneDialer.swift in Sources */,
+				264AEB5D1D17EAEB00F410E1 /* UIBarButtonItem+KWO.swift in Sources */,
+				264AEB631D17EAEB00F410E1 /* KWOConfigurableReusableView.swift in Sources */,
+				264AEB541D17EAEB00F410E1 /* FoursquareService.swift in Sources */,
+				264AEB5C1D17EAEB00F410E1 /* UIApplication+KWO.swift in Sources */,
+				264AEB5E1D17EAEB00F410E1 /* UIFont+KWO.swift in Sources */,
+				264AEB521D17EAEB00F410E1 /* NSObject+KWO.swift in Sources */,
+				264AEB601D17EAEB00F410E1 /* Mailer.swift in Sources */,
+				264AEB4D1D17EAEB00F410E1 /* Stopwatch.swift in Sources */,
+				264AEB481D17EAEB00F410E1 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,7 +520,9 @@
 		};
 		264AEB191D17E8DB00F410E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 254778B4AC31363F879751AB /* Pods-KWOTools.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -241,12 +534,15 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kevinwolkober.KWOTools;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		264AEB1A1D17E8DB00F410E1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5220A11A7209F1051922DE0C /* Pods-KWOTools.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -280,6 +576,7 @@
 				264AEB1A1D17E8DB00F410E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
