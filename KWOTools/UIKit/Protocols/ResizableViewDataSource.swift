@@ -8,19 +8,19 @@
 
 import UIKit
 
-@objc protocol ViewResizable {
+@objc public protocol ViewResizable: NSObjectProtocol {
     var frame: CGRect { get set }
     func systemLayoutSizeFittingSize(targetSize: CGSize) -> CGSize
 }
 
-protocol ResizableViewDataSource {
+public protocol ResizableViewDataSource: NSObjectProtocol {
     var resizableViewLookup: [String: (viewClassName: String, view: KWOConfigurableReusableView?)] { get set }
     var resizableViewHeight: CGFloat? { get }
     func objectAtIndexPath(indexPath: NSIndexPath) -> AnyObject
 }
 
 extension ResizableViewDataSource {
-    mutating func sizeForReusableViewAtIndexPath(indexPath: NSIndexPath) -> CGSize {
+    public func sizeForReusableViewAtIndexPath(indexPath: NSIndexPath) -> CGSize {
         let object = self.objectAtIndexPath(indexPath)
         let className = Mirror.classNameForObject(object)
 
@@ -29,11 +29,11 @@ extension ResizableViewDataSource {
 
         if sizingView == nil {
             let cellNib = UINib(nibName: sizingViewTuple.viewClassName, bundle: nil)
-            sizingView = (cellNib.instantiateWithOwner(nil, options: nil) as NSArray).firstObject as? KWOConfigurableReusableView
+            sizingView = (cellNib.instantiateWithOwner(nil, options: nil) as NSArray).firstObject as! KWOConfigurableReusableView
             self.resizableViewLookup[className]!.view = sizingView
         }
 
-        sizingView!.configureWithObject(object)
+        sizingView!.configure(object)
         let size = sizingView!.systemLayoutSizeFittingSize(UILayoutFittingCompressedSize)
         let height = self.resizableViewHeight ?? sizingView!.frame.height
 
