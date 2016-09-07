@@ -8,25 +8,25 @@
 
 import UIKit
 
-public class Presenter: NSObject {
+open class Presenter: NSObject {
 
-    public func viewDidLoad() {
+    open func viewDidLoad() {
         fatalUnimplementedMethodError(#function, file: #file)
     }
 
-    public func viewWillAppear() {
+    open func viewWillAppear() {
         fatalUnimplementedMethodError(#function, file: #file)
     }
 
-    public func viewWillDisappear() {
+    open func viewWillDisappear() {
         fatalUnimplementedMethodError(#function, file: #file)
     }
 
-    public func viewDidAppear() {
+    open func viewDidAppear() {
         fatalUnimplementedMethodError(#function, file: #file)
     }
 
-    public func showErrorAlert(error: NSError) {
+    open func showErrorAlert(_ error: NSError) {
         UIAlertController.kwo_alert(withError: error).kwo_show()
     }
 }

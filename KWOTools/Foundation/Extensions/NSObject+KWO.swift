@@ -10,16 +10,16 @@ import Foundation
 
 extension NSObject {
     public static var className: String {
-        let components = String(self).characters.split{$0 == "."}.map(String.init)
+        let components = String.init(describing: self).characters.split{$0 == "."}.map(String.init)
 
         return components.last!
     }
 }
 
 extension Mirror {
-    public static func classNameForObject(object: AnyObject) -> String {
+    public static func classNameForObject(_ object: AnyObject) -> String {
         let objectMirror = Mirror(reflecting: object)
 
-        return String(objectMirror.subjectType)
+        return String.init(describing: objectMirror.subjectType)
     }
 }

@@ -27,6 +27,6 @@ extension NSError {
     }
 }
 
-func fatalUnimplementedMethodError(methodSignature: String, file: String) {
+func fatalUnimplementedMethodError(_ methodSignature: String, file: String) {
     fatalError("Please implement \(methodSignature) in \(file). Thank you")
 }

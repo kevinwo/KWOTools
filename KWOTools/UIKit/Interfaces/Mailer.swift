@@ -9,7 +9,7 @@
 import UIKit
 import MessageUI
 
-public class Mailer: NSObject {
+open class Mailer: NSObject {
 
     weak var presentingController: UIViewController!
     var completion: (() -> Void)?
@@ -20,12 +20,12 @@ public class Mailer: NSObject {
         super.init()
     }
 
-    public func sendEmail(recipients: [String], subject: String? = nil, body: String? = nil) {
+    open func sendEmail(_ recipients: [String], subject: String? = nil, body: String? = nil) {
         if MFMailComposeViewController.canSendMail() {
             let controller = MFMailComposeViewController()
             controller.mailComposeDelegate = self
             controller.setToRecipients(recipients)
-            controller.modalPresentationStyle = .FormSheet
+            controller.modalPresentationStyle = .formSheet
 
             if let text = subject {
                 controller.setSubject(text)
@@ -35,7 +35,7 @@ public class Mailer: NSObject {
                 controller.setMessageBody(text, isHTML: false)
             }
 
-            self.presentingController.presentViewController(controller, animated: true, completion: nil)
+            self.presentingController.present(controller, animated: true, completion: nil)
         } else {
             UIAlertController.kwo_alert(withError: NSError.kwo_error(withTitle: "System mail not configured", message: "This device is not configured to send mail. Please send an email to \(recipients.first)")).kwo_show(self.presentingController)
         }
@@ -43,7 +43,7 @@ public class Mailer: NSObject {
 }
 
 extension Mailer: MFMailComposeViewControllerDelegate {
-    public func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
+    public func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         self.completion?()
     }
 }

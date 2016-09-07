@@ -8,14 +8,14 @@
 
 import UIKit
 
-public class DataSource: NSObject {
+open class DataSource: NSObject {
     var sections: [[AnyObject]]!
-    public lazy var sectionTitles: [String] = {
+    open lazy var sectionTitles: [String] = {
         return [String]()
     }()
     var cellReuseIdentifier: String?
     weak var cellDelegate: AnyObject?
-    public var items: [AnyObject]? {
+    open var items: [AnyObject]? {
         get {
             return self.sections.flatMap({ $0 }) as [AnyObject]?
         }
@@ -35,19 +35,19 @@ public class DataSource: NSObject {
         super.init()
     }
 
-    public func objectAtIndexPath(indexPath: NSIndexPath) -> AnyObject {
+    open func objectAtIndexPath(_ indexPath: IndexPath) -> AnyObject {
         return self.sections[indexPath.section][indexPath.row]
     }
 
-    public func setSectionsWithPresortedObjects(objects: [Sectionable]) {
+    open func setSectionsWithPresortedObjects(_ objects: [Sectionable]) {
         var sections = [[AnyObject]]()
         var sectionTitles = [String]()
         var currentCharInTitle = ""
         var currentSectionArray = [AnyObject]()
 
-        for (i, object) in objects.enumerate() {
+        for (i, object) in objects.enumerated() {
             let name = object.sectioningName
-            let firstChar = name.substringToIndex(name.startIndex.advancedBy(1)).uppercaseString
+            let firstChar = name.substring(to: name.characters.index(name.startIndex, offsetBy: 1)).uppercased()
 
             if firstChar != currentCharInTitle {
                 if currentSectionArray.count > 0 {

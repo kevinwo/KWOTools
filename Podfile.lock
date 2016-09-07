@@ -1,12 +1,22 @@
 PODS:
-  - QuadratTouch (1.1.1)
+  - QuadratTouch (1.1.3)
 
 DEPENDENCIES:
-  - QuadratTouch (~> 1.1)
+  - QuadratTouch (from `git@github.com:kevinwo/das-quadrat.git`, branch `swift3`)
+
+EXTERNAL SOURCES:
+  QuadratTouch:
+    :branch: swift3
+    :git: git@github.com:kevinwo/das-quadrat.git
+
+CHECKOUT OPTIONS:
+  QuadratTouch:
+    :commit: 4bf07e6e2fff1033f825f550b17c0993cd95ebb5
+    :git: git@github.com:kevinwo/das-quadrat.git
 
 SPEC CHECKSUMS:
-  QuadratTouch: 296d83c63a4328f6f40af9fc728fe24f0e3b00d4
+  QuadratTouch: 9e311cbd4f0573b58cafe6783df1fa7ce2458afa
 
-PODFILE CHECKSUM: c06cd4bb06df10ab88306ff6b6a7e53484f5735e
+PODFILE CHECKSUM: 6f5269ef36ad1d085be34706808c0ab30c90e777
 
 COCOAPODS: 1.0.1

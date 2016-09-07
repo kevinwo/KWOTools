@@ -8,9 +8,9 @@
 
 import UIKit
 
-public class CollectionViewDataSource: DataSource {
+open class CollectionViewDataSource: DataSource {
 
-    public weak var collectionView: UICollectionView!
+    open weak var collectionView: UICollectionView!
 
     convenience public init(collectionView: UICollectionView, sections: [[AnyObject]]) {
         self.init(collectionView: collectionView)
@@ -23,24 +23,24 @@ public class CollectionViewDataSource: DataSource {
         self.collectionView.dataSource = self
     }
 
-    public func reload() {
+    open func reload() {
         self.collectionView.reloadData()
     }
 }
 
 extension CollectionViewDataSource: UICollectionViewDataSource {
-    public func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+    public func numberOfSections(in collectionView: UICollectionView) -> Int {
         return self.sections.count
     }
 
-    public func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.sections[section].count
     }
 
-    public func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let object = self.sections[indexPath.section][indexPath.row]
         let reuseIdentifier = self.cellReuseIdentifier ?? Mirror.classNameForObject(object)
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
         let reusableView = cell as! KWOConfigurableReusableView
 
         if self.cellDelegate != nil {

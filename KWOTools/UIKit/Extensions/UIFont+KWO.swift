@@ -11,12 +11,12 @@ import UIKit
 extension UIFont {
     public class func kwo_preferredFont(forTextStyle style: String, customFontName: String? = nil) -> UIFont {
         if let name = customFontName {
-            let systemDynamicFontDescriptor = UIFontDescriptor.preferredFontDescriptorWithTextStyle(style)
+            let systemDynamicFontDescriptor = UIFontDescriptor.preferredFontDescriptor(withTextStyle: UIFontTextStyle(rawValue: style))
             let size = systemDynamicFontDescriptor.pointSize
 
             return UIFont(name: name, size: size)!
         }
 
-        return UIFont.preferredFontForTextStyle(style)
+        return UIFont.preferredFont(forTextStyle: UIFontTextStyle(rawValue: style))
     }
 }

@@ -8,12 +8,16 @@
 
 import Foundation
 
-extension NSIndexSet {
+extension IndexSet {
     public func toArray() -> [Int] {
         var indexes = [Int]()
 
-        self.enumerateIndexesUsingBlock { (index:Int, _) in
-            indexes.append(index)
+        let indexSet = self as NSIndexSet
+        var currentIndex = indexSet.firstIndex
+
+        while currentIndex != NSNotFound {
+            indexes.append(currentIndex)
+            currentIndex = indexSet.indexGreaterThanIndex(currentIndex)
         }
 
         return indexes

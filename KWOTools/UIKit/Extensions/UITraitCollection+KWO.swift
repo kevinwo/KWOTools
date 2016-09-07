@@ -12,7 +12,7 @@ import UIKit
 
 extension UITraitCollection {
     public func kwo_matchesPhoneLandscape() -> Bool {
-        if (self.horizontalSizeClass == .Compact && self.verticalSizeClass == .Compact) || (self.horizontalSizeClass == .Regular && self.verticalSizeClass == .Compact) {
+        if (self.horizontalSizeClass == .compact && self.verticalSizeClass == .compact) || (self.horizontalSizeClass == .regular && self.verticalSizeClass == .compact) {
             return true
         }
 
@@ -20,7 +20,7 @@ extension UITraitCollection {
     }
 
     public func kwo_matchesPhonePortrait() -> Bool {
-        if self.horizontalSizeClass == .Compact && self.verticalSizeClass == .Regular {
+        if self.horizontalSizeClass == .compact && self.verticalSizeClass == .regular {
             return true
         }
 

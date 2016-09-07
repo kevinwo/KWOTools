@@ -3,5 +3,5 @@ platform :ios, '9.0'
 target 'KWOTools' do
   use_frameworks!
 
-  pod 'QuadratTouch', '~> 1.1'
+  pod 'QuadratTouch', :git => 'git@github.com:kevinwo/das-quadrat.git', :branch => 'swift3'
 end

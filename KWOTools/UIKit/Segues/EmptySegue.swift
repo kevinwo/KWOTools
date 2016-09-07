@@ -8,9 +8,9 @@
 
 import UIKit
 
-public class EmptySegue: UIStoryboardSegue {
+open class EmptySegue: UIStoryboardSegue {
 
-    override public func perform() {
+    override open func perform() {
         // Nothing
     }
 }

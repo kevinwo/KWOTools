@@ -9,8 +9,8 @@
 import UIKit.UIBarButtonItem
 
 extension UIBarButtonItem {
-    public class func fixedSpaceItem(width: CGFloat) -> UIBarButtonItem {
-        let item = UIBarButtonItem(barButtonSystemItem: .FixedSpace, target: nil, action: nil)
+    public class func fixedSpaceItem(_ width: CGFloat) -> UIBarButtonItem {
+        let item = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
         item.width = width
 
         return item

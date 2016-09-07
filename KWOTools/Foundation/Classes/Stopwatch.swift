@@ -8,21 +8,21 @@
 
 import Foundation
 
-public class Stopwatch: NSObject {
+open class Stopwatch: NSObject {
 
-    public var timeElapsed: Double
-    private var timer: NSTimer!
+    open var timeElapsed: Double
+    fileprivate var timer: Timer!
 
     public override init() {
         self.timeElapsed = 0
         super.init()
     }
 
-    public func start() {
-        self.timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: #selector(self.timerFired), userInfo: nil, repeats: true)
+    open func start() {
+        self.timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(self.timerFired), userInfo: nil, repeats: true)
     }
 
-    public func stop() {
+    open func stop() {
         self.timer.invalidate()
     }
 

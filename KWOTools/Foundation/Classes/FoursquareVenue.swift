@@ -8,12 +8,12 @@
 
 import Foundation
 
-public class FoursquareVenue {
+open class FoursquareVenue {
 
-    public var id: String!
-    public var name: String!
-    public var rating: Double?
-    public var ratingString: String? {
+    open var id: String!
+    open var name: String!
+    open var rating: Double?
+    open var ratingString: String? {
         get {
             if let value = rating {
                 return String(format: "%.1f", value)
@@ -22,22 +22,22 @@ public class FoursquareVenue {
             return nil
         }
     }
-    public var canonicalURLString: String!
-    public var canonicalURL: NSURL {
+    open var canonicalURLString: String!
+    open var canonicalURL: URL {
         get {
-            return NSURL(string: self.canonicalURLString)!
+            return URL(string: self.canonicalURLString)!
         }
     }
-    public var isFault: Bool {
+    open var isFault: Bool {
         get {
             return canonicalURLString == nil
         }
     }
 
-    private let kFoursquareVenueID = "id"
-    private let kFoursquareVenueName = "name"
-    private let kFoursquareVenueRating = "rating"
-    private let kFoursquareVenueCanonicalURL = "canonicalUrl"
+    fileprivate let kFoursquareVenueID = "id"
+    fileprivate let kFoursquareVenueName = "name"
+    fileprivate let kFoursquareVenueRating = "rating"
+    fileprivate let kFoursquareVenueCanonicalURL = "canonicalUrl"
 
     public init(id: String) {
         self.id = id

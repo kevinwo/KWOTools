@@ -15,22 +15,22 @@ public let kKWOLocationManagerDidFailUpdatePlacemarkWithErrorNotification = "kKW
 
 public let KWOLocationErrorCodeDenied: Int = 1000
 
-public typealias KWOFindUserLocationSuccessBlock = ((location: CLLocation) -> Void)?
-public typealias KWOFindUserLocationFailureBlock = ((error: NSError) -> Void)?
+public typealias KWOFindUserLocationSuccessBlock = ((_ location: CLLocation) -> Void)?
+public typealias KWOFindUserLocationFailureBlock = ((_ error: NSError) -> Void)?
 
-public class KWOLocationManager: NSObject {
+open class KWOLocationManager: NSObject {
 
-    public var currentLocation: CLLocation?
-    public var currentPlacemark: CLPlacemark?
-    private var findUserLocationSuccessBlock: KWOFindUserLocationSuccessBlock?
-    private var findUserLocationFailureBlock: KWOFindUserLocationFailureBlock?
-    private var restrictedError: NSError {
+    open var currentLocation: CLLocation?
+    open var currentPlacemark: CLPlacemark?
+    fileprivate var findUserLocationSuccessBlock: KWOFindUserLocationSuccessBlock?
+    fileprivate var findUserLocationFailureBlock: KWOFindUserLocationFailureBlock?
+    fileprivate var restrictedError: NSError {
         get {
             let appName = kKWOAppBundleName ?? "the application"
             return NSError.kwo_error(withTitle: "Location Services Restricted", message: "Enable Location Services in Settings > General > Restrictions to allow \(appName) to determine your current location.", domain: kKWOErrorDomain, code: KWOLocationErrorCodeDenied)
         }
     }
-    private var deniedError: NSError {
+    fileprivate var deniedError: NSError {
         get {
             let appName = kKWOAppBundleName ?? "the application"
             return NSError.kwo_error(withTitle: "Location Services Off", message: "Turn on Location Services in Settings > Privacy to allow \(appName) to determine your current location.", domain: kKWOErrorDomain, code: KWOLocationErrorCodeDenied)
@@ -45,88 +45,88 @@ public class KWOLocationManager: NSObject {
     }()
     let geocoder = CLGeocoder()
 
-    public func findMyLocation(success: KWOFindUserLocationSuccessBlock? = nil, failure: KWOFindUserLocationFailureBlock? = nil) {
+    open func findMyLocation(_ success: KWOFindUserLocationSuccessBlock? = nil, failure: KWOFindUserLocationFailureBlock? = nil) {
         self.findUserLocationSuccessBlock = success
         self.findUserLocationFailureBlock = failure
         self.findLocation(withAuthorizationStatus: CLLocationManager.authorizationStatus())
     }
 
-    public func currentLocationDistance(latitude: Double, longitude: Double) -> CLLocationDistance? {
+    open func currentLocationDistance(_ latitude: Double, longitude: Double) -> CLLocationDistance? {
         let loc = CLLocation(latitude: latitude, longitude: longitude)
 
         if let location = self.currentLocation {
-            return loc.distanceFromLocation(location)
+            return loc.distance(from: location)
         }
 
         return nil
     }
 
-    public func hasCurrentLocation() -> Bool {
+    open func hasCurrentLocation() -> Bool {
         return self.currentLocation != nil
     }
 
-    public func reverseGeocodeCurrentLocation() {
+    open func reverseGeocodeCurrentLocation() {
         if let location = self.currentLocation {
             self.geocoder.reverseGeocodeLocation(location) { (placemarks, error) -> Void in
                 if error == nil {
                     self.currentPlacemark = placemarks!.first!
-                    NSNotificationCenter.defaultCenter().postNotificationName(kKWOLocationManagerDidUpdatePlacemarkNotification, object: nil)
+                    NotificationCenter.default.post(name: Notification.Name(rawValue: kKWOLocationManagerDidUpdatePlacemarkNotification), object: nil)
                 } else {
-                    NSNotificationCenter.defaultCenter().postNotificationName(kKWOLocationManagerDidFailUpdatePlacemarkWithErrorNotification, object: nil)
+                    NotificationCenter.default.post(name: Notification.Name(rawValue: kKWOLocationManagerDidFailUpdatePlacemarkWithErrorNotification), object: nil)
                 }
             }
         }
     }
 
-    private func findLocation(withAuthorizationStatus status: CLAuthorizationStatus) {
+    fileprivate func findLocation(withAuthorizationStatus status: CLAuthorizationStatus) {
         var error: NSError?
 
         switch status {
-        case .AuthorizedAlways, .AuthorizedWhenInUse:
+        case .authorizedAlways, .authorizedWhenInUse:
             self.findUserLocation()
-        case .NotDetermined:
+        case .notDetermined:
             self.locationManager.requestWhenInUseAuthorization()
-        case .Restricted:
+        case .restricted:
             error = self.restrictedError
-        case .Denied:
+        case .denied:
             error = self.deniedError
         }
 
-        if let anError = error, failureBlock = self.findUserLocationFailureBlock {
-            failureBlock!(error: anError)
+        if let anError = error, let failureBlock = self.findUserLocationFailureBlock {
+            failureBlock!(anError)
             self.findUserLocationFailureBlock = nil
         }
     }
 }
 
 extension KWOLocationManager: CLLocationManagerDelegate {
-    public func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+    public func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         self.locationManager.stopUpdatingLocation()
         self.currentLocation = locations.first!
-        NSNotificationCenter.defaultCenter().postNotificationName(kKWOLocationManagerDidUpdateLocationNotification, object: nil)
+        NotificationCenter.default.post(name: Notification.Name(rawValue: kKWOLocationManagerDidUpdateLocationNotification), object: nil)
 
         if let completion = self.findUserLocationSuccessBlock {
-            completion!(location: self.currentLocation!)
+            completion!(self.currentLocation!)
             self.findUserLocationSuccessBlock = nil
         }
     }
 
-    public func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
-        NSNotificationCenter.defaultCenter().postNotificationName(kKWOLocationManagerDidFailUpdateLocationWithErrorNotification, object: nil)
+    public func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        NotificationCenter.default.post(name: Notification.Name(rawValue: kKWOLocationManagerDidFailUpdateLocationWithErrorNotification), object: nil)
 
         if let completion = self.findUserLocationFailureBlock {
-            completion!(error: error)
+            completion!(error as NSError)
             self.findUserLocationFailureBlock = nil
         }
     }
 
-    public func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+    public func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         self.findLocation(withAuthorizationStatus: status)
     }
 
     // MARK: Private interface
 
-    private func findUserLocation() {
+    fileprivate func findUserLocation() {
         self.locationManager.startUpdatingLocation()
     }
 }

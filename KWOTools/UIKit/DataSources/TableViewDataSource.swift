@@ -8,12 +8,12 @@
 
 import UIKit
 
-public typealias KWOTableViewDataSourceCellConfigurationBlock = (cell: UITableViewCell, object: AnyObject) -> Void
+public typealias KWOTableViewDataSourceCellConfigurationBlock = (_ cell: UITableViewCell, _ object: AnyObject) -> Void
 
-public class TableViewDataSource: DataSource {
+open class TableViewDataSource: DataSource {
 
-    public weak var tableView: UITableView!
-    public var cellConfigurationBlock: KWOTableViewDataSourceCellConfigurationBlock?
+    open weak var tableView: UITableView!
+    open var cellConfigurationBlock: KWOTableViewDataSourceCellConfigurationBlock?
 
     public convenience init(tableView: UITableView, sections: [[AnyObject]]) {
         self.init(tableView: tableView)
@@ -27,15 +27,15 @@ public class TableViewDataSource: DataSource {
         self.tableView.dataSource = self
     }
 
-    public func objectInCell(cell: UITableViewCell) -> AnyObject? {
-        if let indexPath = self.tableView.indexPathForCell(cell) {
+    open func objectInCell(_ cell: UITableViewCell) -> AnyObject? {
+        if let indexPath = self.tableView.indexPath(for: cell) {
             return self.sections[indexPath.section][indexPath.row]
         }
 
         return nil
     }
 
-    public func selectedObject() -> AnyObject? {
+    open func selectedObject() -> AnyObject? {
         if let indexPath = self.tableView.indexPathForSelectedRow {
             return self.sections[indexPath.section][indexPath.row]
         }
@@ -43,28 +43,28 @@ public class TableViewDataSource: DataSource {
         return nil
     }
 
-    public func reload() {
+    open func reload() {
         self.tableView.reloadData()
     }
 }
 
 extension TableViewDataSource: UITableViewDataSource {
-    public func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    public func numberOfSections(in tableView: UITableView) -> Int {
         return self.sections.count
     }
 
-    public func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.sections[section].count
     }
 
-    public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let object = self.sections[indexPath.section][indexPath.row]
         let reuseIdentifier = self.cellReuseIdentifier ?? Mirror.classNameForObject(object)
-        let cell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier, forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath)
         let reusableView = cell as! KWOConfigurableReusableView
 
         if self.cellConfigurationBlock != nil {
-            self.cellConfigurationBlock!(cell: cell, object: object)
+            self.cellConfigurationBlock!(cell, object)
         } else {
             if self.cellDelegate != nil {
                 reusableView.setDelegate?(self.cellDelegate!)
@@ -78,11 +78,11 @@ extension TableViewDataSource: UITableViewDataSource {
         return cell
     }
 
-    public func sectionIndexTitlesForTableView(tableView: UITableView) -> [String]? {
+    public func sectionIndexTitles(for tableView: UITableView) -> [String]? {
         return self.sectionTitles.isEmpty ? nil : self.sectionTitles
     }
 
-    public func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    public func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return self.sectionTitles.isEmpty ? nil : self.sectionTitles[section]
     }
 }

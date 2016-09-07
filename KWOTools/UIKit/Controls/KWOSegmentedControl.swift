@@ -8,22 +8,22 @@
 
 import UIKit
 
-public class KWOSegmentedControl: UISegmentedControl {
+open class KWOSegmentedControl: UISegmentedControl {
 
     public init(items: [AnyObject]?, target: AnyObject?, selector: Selector, segmentWidth: CGFloat? = nil) {
-        super.init(frame: CGRectZero)
+        super.init(frame: CGRect.zero)
 
-        self.addTarget(target, action: selector, forControlEvents: .ValueChanged)
+        self.addTarget(target, action: selector, for: .valueChanged)
 
-        if let theItems = items where theItems.count > 0 {
+        if let theItems = items , theItems.count > 0 {
             for item in theItems {
                 let end = self.numberOfSegments
 
                 switch item {
                 case is UIImage:
-                    self.insertSegmentWithImage(item as? UIImage, atIndex: end, animated: false)
+                    self.insertSegment(with: item as? UIImage, at: end, animated: false)
                 case is String:
-                    self.insertSegmentWithTitle(item as? String, atIndex: end, animated: false)
+                    self.insertSegment(withTitle: item as? String, at: end, animated: false)
                 default:
                     break
                 }
@@ -33,7 +33,7 @@ public class KWOSegmentedControl: UISegmentedControl {
 
         if let width = segmentWidth {
             for segment in 0..<self.numberOfSegments {
-                self.setWidth(width, forSegmentAtIndex: segment)
+                self.setWidth(width, forSegmentAt: segment)
             }
         }
 

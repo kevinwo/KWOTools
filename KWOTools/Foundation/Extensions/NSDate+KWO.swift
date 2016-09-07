@@ -8,10 +8,10 @@
 
 import Foundation
 
-extension NSDate {
-    public class func dateFromDouble(doubleDate: Double?) -> NSDate? {
+extension Date {
+    public static func dateFromDouble(_ doubleDate: Double?) -> Date? {
         if let date = doubleDate {
-            return NSDate(timeIntervalSince1970: NSTimeInterval(date))
+            return Date(timeIntervalSince1970: TimeInterval(date))
         }
 
         return nil

@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class PhoneDialer: NSObject {
+open class PhoneDialer: NSObject {
 
     weak var application: UIApplication!
 
@@ -16,12 +16,12 @@ public class PhoneDialer: NSObject {
         self.application = application
     }
 
-    public func dial(phoneNumber: String) {
-        let strippedString = phoneNumber.componentsSeparatedByCharactersInSet(NSCharacterSet.decimalDigitCharacterSet().invertedSet).joinWithSeparator("")
-        let URL = NSURL(string: "tel://\(strippedString)")!
+    open func dial(_ phoneNumber: String) {
+        let strippedString = phoneNumber.components(separatedBy: CharacterSet.decimalDigits.inverted).joined(separator: "")
+        let URL = Foundation.URL(string: "tel://\(strippedString)")!
 
         if (self.application.canOpenURL(URL)) {
-            dispatch_async(dispatch_get_main_queue(), {
+            DispatchQueue.main.async(execute: {
                 self.application.openURL(URL)
             })
         }

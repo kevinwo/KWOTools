@@ -8,7 +8,7 @@
 
 import QuadratTouch
 
-public class FoursquareService {
+open class FoursquareService {
 
     let session: Session
 
@@ -21,15 +21,15 @@ public class FoursquareService {
         self.session = Session.sharedSession()
     }
 
-    public func fetchVenue(venueId: String, success: (response: [String: AnyObject]) -> Void, failure: (error: NSError) -> Void) {
+    open func fetchVenue(_ venueId: String, success: @escaping (_ response: [String: AnyObject]) -> Void, failure: @escaping (_ error: Error) -> Void) {
         let task = self.session.venues.get(venueId) { (result) in
             if let error = result.error {
-                failure(error: error)
+                failure(error)
             } else {
                 if let response = result.response {
-                    success(response: response)
+                    success(response)
                 } else {
-                    failure(error: NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "No data was returned for this venue"]))
+                    failure((NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "No data was returned for this venue"])) as Error)
                 }
             }
         }

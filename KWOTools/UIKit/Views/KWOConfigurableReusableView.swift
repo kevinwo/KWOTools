@@ -9,6 +9,6 @@
 import Foundation
 
 @objc public protocol KWOConfigurableReusableView: ViewResizable {
-    func configure(object: AnyObject)
-    optional func setDelegate(delegate: AnyObject)
+    func configure(_ object: AnyObject)
+    @objc optional func setDelegate(_ delegate: AnyObject)
 }

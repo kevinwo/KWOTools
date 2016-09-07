@@ -10,11 +10,11 @@ import UIKit.UIApplication
 
 extension UIApplication {
     public class func resignKeyboard() {
-        UIApplication.sharedApplication().keyWindow?.endEditing(true)
+        UIApplication.shared.keyWindow?.endEditing(true)
     }
 
-    public class func canOpen(URLScheme: String) -> Bool {
-        return UIApplication.sharedApplication().canOpenURL(
-            NSURL(string: URLScheme)!)
+    public class func canOpen(_ URLScheme: String) -> Bool {
+        return UIApplication.shared.canOpenURL(
+            URL(string: URLScheme)!)
     }
 }

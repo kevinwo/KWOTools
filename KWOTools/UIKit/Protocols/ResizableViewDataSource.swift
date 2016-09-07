@@ -10,17 +10,17 @@ import UIKit
 
 @objc public protocol ViewResizable: NSObjectProtocol {
     var frame: CGRect { get set }
-    func systemLayoutSizeFittingSize(targetSize: CGSize) -> CGSize
+    func systemLayoutSizeFittingSize(_ targetSize: CGSize) -> CGSize
 }
 
 public protocol ResizableViewDataSource: NSObjectProtocol {
     var resizableViewLookup: [String: (viewClassName: String, view: KWOConfigurableReusableView?)] { get set }
     var resizableViewHeight: CGFloat? { get }
-    func objectAtIndexPath(indexPath: NSIndexPath) -> AnyObject
+    func objectAtIndexPath(_ indexPath: IndexPath) -> AnyObject
 }
 
 extension ResizableViewDataSource {
-    public func sizeForReusableViewAtIndexPath(indexPath: NSIndexPath) -> CGSize {
+    public func sizeForReusableViewAtIndexPath(_ indexPath: IndexPath) -> CGSize {
         let object = self.objectAtIndexPath(indexPath)
         let className = Mirror.classNameForObject(object)
 
@@ -29,7 +29,7 @@ extension ResizableViewDataSource {
 
         if sizingView == nil {
             let cellNib = UINib(nibName: sizingViewTuple.viewClassName, bundle: nil)
-            sizingView = (cellNib.instantiateWithOwner(nil, options: nil) as NSArray).firstObject as! KWOConfigurableReusableView
+            sizingView = (cellNib.instantiate(withOwner: nil, options: nil) as NSArray).firstObject as! KWOConfigurableReusableView
             self.resizableViewLookup[className]!.view = sizingView
         }
 
@@ -37,6 +37,6 @@ extension ResizableViewDataSource {
         let size = sizingView!.systemLayoutSizeFittingSize(UILayoutFittingCompressedSize)
         let height = self.resizableViewHeight ?? sizingView!.frame.height
 
-        return CGSizeMake(size.width, height)
+        return CGSize(width: size.width, height: height)
     }
 }
