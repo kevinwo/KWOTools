@@ -10,5 +10,4 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.source_files = 'KWOTools/**/*.{h,m,swift}'
   s.frameworks = 'Foundation'
-  s.dependency 'QuadratTouch', '~> 1.1'
 end
