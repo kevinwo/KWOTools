@@ -29,7 +29,7 @@ extension ResizableViewDataSource {
 
         if sizingView == nil {
             let cellNib = UINib(nibName: sizingViewTuple.viewClassName, bundle: nil)
-            sizingView = (cellNib.instantiate(withOwner: nil, options: nil) as NSArray).firstObject as! KWOConfigurableReusableView
+            sizingView = (cellNib.instantiate(withOwner: nil, options: nil) as NSArray).firstObject as? KWOConfigurableReusableView
             self.resizableViewLookup[className]!.view = sizingView
         }
 

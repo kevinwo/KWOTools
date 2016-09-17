@@ -11,4 +11,4 @@ import Foundation
 public let kKWOErrorDomain = "KWOErrorDomain"
 public let kKWOAppBundleName: String? = Bundle.main.infoDictionary?[kCFBundleNameKey as String] as? String
 public typealias KWOSuccessBlock = () -> Void
-public typealias KWOFailureBlock = (_ error: NSError) -> Void
+public typealias KWOFailureBlock = (_ error: Error) -> Void
