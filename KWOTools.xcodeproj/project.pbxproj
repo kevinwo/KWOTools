@@ -37,11 +37,9 @@
 		264AEB621D17EAEB00F410E1 /* EmptySegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264AEB441D17EAEB00F410E1 /* EmptySegue.swift */; };
 		264AEB631D17EAEB00F410E1 /* KWOConfigurableReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264AEB461D17EAEB00F410E1 /* KWOConfigurableReusableView.swift */; };
 		2676A3541D195B73009997E2 /* ResizableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2676A3531D195B73009997E2 /* ResizableViewDataSource.swift */; };
-		BCF997C32EE53F3B959B815A /* Pods_KWOTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3C4733BC49D606F808BF664 /* Pods_KWOTools.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		254778B4AC31363F879751AB /* Pods-KWOTools.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KWOTools.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KWOTools/Pods-KWOTools.debug.xcconfig"; sourceTree = "<group>"; };
 		264A4BAA1D17EE7E008866B0 /* KWOTools.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = KWOTools.podspec; sourceTree = "<group>"; };
 		264AEB101D17E8DB00F410E1 /* KWOTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KWOTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		264AEB131D17E8DB00F410E1 /* KWOTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KWOTools.h; sourceTree = "<group>"; };
@@ -74,7 +72,6 @@
 		264AEB441D17EAEB00F410E1 /* EmptySegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptySegue.swift; sourceTree = "<group>"; };
 		264AEB461D17EAEB00F410E1 /* KWOConfigurableReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KWOConfigurableReusableView.swift; sourceTree = "<group>"; };
 		2676A3531D195B73009997E2 /* ResizableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResizableViewDataSource.swift; sourceTree = "<group>"; };
-		5220A11A7209F1051922DE0C /* Pods-KWOTools.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KWOTools.release.xcconfig"; path = "Pods/Target Support Files/Pods-KWOTools/Pods-KWOTools.release.xcconfig"; sourceTree = "<group>"; };
 		E3C4733BC49D606F808BF664 /* Pods_KWOTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KWOTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -83,7 +80,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BCF997C32EE53F3B959B815A /* Pods_KWOTools.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,7 +92,6 @@
 				264A4BAA1D17EE7E008866B0 /* KWOTools.podspec */,
 				264AEB121D17E8DB00F410E1 /* KWOTools */,
 				264AEB111D17E8DB00F410E1 /* Products */,
-				51CB52F9BCCDE73286F813CA /* Pods */,
 				944021ED2EC236A676E076FD /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -258,15 +253,6 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
-		51CB52F9BCCDE73286F813CA /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				254778B4AC31363F879751AB /* Pods-KWOTools.debug.xcconfig */,
-				5220A11A7209F1051922DE0C /* Pods-KWOTools.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		944021ED2EC236A676E076FD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -293,12 +279,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 264AEB181D17E8DB00F410E1 /* Build configuration list for PBXNativeTarget "KWOTools" */;
 			buildPhases = (
-				5D4956DCCF8DB933C4595395 /* [CP] Check Pods Manifest.lock */,
 				264AEB0B1D17E8DB00F410E1 /* Sources */,
 				264AEB0C1D17E8DB00F410E1 /* Frameworks */,
 				264AEB0D1D17E8DB00F410E1 /* Headers */,
 				264AEB0E1D17E8DB00F410E1 /* Resources */,
-				FF6118E2683CF14447183B68 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -350,39 +334,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		5D4956DCCF8DB933C4595395 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		FF6118E2683CF14447183B68 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KWOTools/Pods-KWOTools-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		264AEB0B1D17E8DB00F410E1 /* Sources */ = {
@@ -521,7 +472,6 @@
 		};
 		264AEB191D17E8DB00F410E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 254778B4AC31363F879751AB /* Pods-KWOTools.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -544,7 +494,6 @@
 		};
 		264AEB1A1D17E8DB00F410E1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5220A11A7209F1051922DE0C /* Pods-KWOTools.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
