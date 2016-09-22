@@ -22,7 +22,7 @@ open class PhoneDialer: NSObject {
 
         if (self.application.canOpenURL(URL)) {
             DispatchQueue.main.async(execute: {
-                self.application.openURL(URL)
+                self.application.kwo_open(URL)
             })
         }
     }
