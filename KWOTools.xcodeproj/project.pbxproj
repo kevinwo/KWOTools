@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		262C5AFD1DA3F0D700D9D03E /* FoursquareService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262C5AFC1DA3F0D700D9D03E /* FoursquareService.swift */; };
+		262C5B001DA3F1DE00D9D03E /* FoursquareVenue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262C5AFF1DA3F1DE00D9D03E /* FoursquareVenue.swift */; };
+		262C5B031DA3F26000D9D03E /* QuadratTouch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 262C5B021DA3F26000D9D03E /* QuadratTouch.framework */; };
 		264A4BAB1D17EE7E008866B0 /* KWOTools.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 264A4BAA1D17EE7E008866B0 /* KWOTools.podspec */; };
 		264AEB141D17E8DB00F410E1 /* KWOTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 264AEB131D17E8DB00F410E1 /* KWOTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		264AEB471D17EAEB00F410E1 /* Speaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264AEB1D1D17EAEB00F410E1 /* Speaker.swift */; };
@@ -40,6 +43,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		262C5AFC1DA3F0D700D9D03E /* FoursquareService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareService.swift; sourceTree = "<group>"; };
+		262C5AFE1DA3F16800D9D03E /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		262C5AFF1DA3F1DE00D9D03E /* FoursquareVenue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareVenue.swift; sourceTree = "<group>"; };
+		262C5B021DA3F26000D9D03E /* QuadratTouch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuadratTouch.framework; path = Carthage/Build/iOS/QuadratTouch.framework; sourceTree = "<group>"; };
 		264A4BAA1D17EE7E008866B0 /* KWOTools.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = KWOTools.podspec; sourceTree = "<group>"; };
 		264AEB101D17E8DB00F410E1 /* KWOTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KWOTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		264AEB131D17E8DB00F410E1 /* KWOTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KWOTools.h; sourceTree = "<group>"; };
@@ -80,15 +87,25 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				262C5B031DA3F26000D9D03E /* QuadratTouch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		262C5AFB1DA3F0B100D9D03E /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				262C5AFC1DA3F0D700D9D03E /* FoursquareService.swift */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
 		264AEB061D17E8DA00F410E1 = {
 			isa = PBXGroup;
 			children = (
+				262C5AFE1DA3F16800D9D03E /* Cartfile */,
 				264A4BAA1D17EE7E008866B0 /* KWOTools.podspec */,
 				264AEB121D17E8DB00F410E1 /* KWOTools */,
 				264AEB111D17E8DB00F410E1 /* Products */,
@@ -138,6 +155,7 @@
 		264AEB221D17EAEB00F410E1 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				262C5AFB1DA3F0B100D9D03E /* Interfaces */,
 				264AEB231D17EAEB00F410E1 /* Classes */,
 				264AEB271D17EAEB00F410E1 /* Extensions */,
 				264AEB301D17EAEB00F410E1 /* Protocols */,
@@ -150,6 +168,7 @@
 			children = (
 				264AEB251D17EAEB00F410E1 /* Presenter.swift */,
 				264AEB261D17EAEB00F410E1 /* Stopwatch.swift */,
+				262C5AFF1DA3F1DE00D9D03E /* FoursquareVenue.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -256,6 +275,7 @@
 		944021ED2EC236A676E076FD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				262C5B021DA3F26000D9D03E /* QuadratTouch.framework */,
 				E3C4733BC49D606F808BF664 /* Pods_KWOTools.framework */,
 			);
 			name = Frameworks;
@@ -283,6 +303,7 @@
 				264AEB0C1D17E8DB00F410E1 /* Frameworks */,
 				264AEB0D1D17E8DB00F410E1 /* Headers */,
 				264AEB0E1D17E8DB00F410E1 /* Resources */,
+				262C5B011DA3F1FC00D9D03E /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -335,6 +356,24 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		262C5B011DA3F1FC00D9D03E /* Copy Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/QuadratTouch.framework",
+			);
+			name = "Copy Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		264AEB0B1D17E8DB00F410E1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -346,11 +385,13 @@
 				264AEB621D17EAEB00F410E1 /* EmptySegue.swift in Sources */,
 				264AEB4A1D17EAEB00F410E1 /* KWOLocationManager.swift in Sources */,
 				264AEB5B1D17EAEB00F410E1 /* UIAlertController+KWO.swift in Sources */,
+				262C5B001DA3F1DE00D9D03E /* FoursquareVenue.swift in Sources */,
 				264AEB531D17EAEB00F410E1 /* String+KWO.swift in Sources */,
 				264AEB571D17EAEB00F410E1 /* KWOSegmentedControl.swift in Sources */,
 				264AEB5F1D17EAEB00F410E1 /* UITraitCollection+KWO.swift in Sources */,
 				264AEB5A1D17EAEB00F410E1 /* TableViewDataSource.swift in Sources */,
 				264AEB591D17EAEB00F410E1 /* DataSource.swift in Sources */,
+				262C5AFD1DA3F0D700D9D03E /* FoursquareService.swift in Sources */,
 				264AEB561D17EAEB00F410E1 /* Sectionable.swift in Sources */,
 				264AEB501D17EAEB00F410E1 /* NSError+KWO.swift in Sources */,
 				264AEB551D17EAEB00F410E1 /* AppInitializer.swift in Sources */,
@@ -481,6 +522,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = KWOTools/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -505,6 +550,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = KWOTools/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
