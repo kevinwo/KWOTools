@@ -8,6 +8,7 @@
 
 import UIKit
 import MessageUI
+import KWOTools
 
 open class Mailer: NSObject {
 

@@ -30,17 +30,55 @@
 		264AEB581D17EAEB00F410E1 /* CollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264AEB371D17EAEB00F410E1 /* CollectionViewDataSource.swift */; };
 		264AEB591D17EAEB00F410E1 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264AEB381D17EAEB00F410E1 /* DataSource.swift */; };
 		264AEB5A1D17EAEB00F410E1 /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264AEB391D17EAEB00F410E1 /* TableViewDataSource.swift */; };
-		264AEB5B1D17EAEB00F410E1 /* UIAlertController+KWO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264AEB3B1D17EAEB00F410E1 /* UIAlertController+KWO.swift */; };
 		264AEB5C1D17EAEB00F410E1 /* UIApplication+KWO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264AEB3C1D17EAEB00F410E1 /* UIApplication+KWO.swift */; };
 		264AEB5D1D17EAEB00F410E1 /* UIBarButtonItem+KWO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264AEB3D1D17EAEB00F410E1 /* UIBarButtonItem+KWO.swift */; };
 		264AEB5E1D17EAEB00F410E1 /* UIFont+KWO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264AEB3E1D17EAEB00F410E1 /* UIFont+KWO.swift */; };
 		264AEB5F1D17EAEB00F410E1 /* UITraitCollection+KWO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264AEB3F1D17EAEB00F410E1 /* UITraitCollection+KWO.swift */; };
-		264AEB601D17EAEB00F410E1 /* Mailer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264AEB411D17EAEB00F410E1 /* Mailer.swift */; };
-		264AEB611D17EAEB00F410E1 /* PhoneDialer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264AEB421D17EAEB00F410E1 /* PhoneDialer.swift */; };
 		264AEB621D17EAEB00F410E1 /* EmptySegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264AEB441D17EAEB00F410E1 /* EmptySegue.swift */; };
 		264AEB631D17EAEB00F410E1 /* KWOConfigurableReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264AEB461D17EAEB00F410E1 /* KWOConfigurableReusableView.swift */; };
 		2676A3541D195B73009997E2 /* ResizableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2676A3531D195B73009997E2 /* ResizableViewDataSource.swift */; };
+		26B29A981DA4B0F000E7C0F8 /* KWOToolsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26B29A8F1DA4B0F000E7C0F8 /* KWOToolsApp.framework */; };
+		26B29A9D1DA4B0F000E7C0F8 /* KWOToolsAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B29A9C1DA4B0F000E7C0F8 /* KWOToolsAppTests.swift */; };
+		26B29A9F1DA4B0F000E7C0F8 /* KWOToolsApp.h in Headers */ = {isa = PBXBuildFile; fileRef = 26B29A911DA4B0F000E7C0F8 /* KWOToolsApp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		26B29AB41DA4B0FE00E7C0F8 /* KWOToolsExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26B29AAB1DA4B0FE00E7C0F8 /* KWOToolsExtension.framework */; };
+		26B29AB91DA4B0FE00E7C0F8 /* KWOToolsExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B29AB81DA4B0FE00E7C0F8 /* KWOToolsExtensionTests.swift */; };
+		26B29ABB1DA4B0FE00E7C0F8 /* KWOToolsExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 26B29AAD1DA4B0FE00E7C0F8 /* KWOToolsExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		26B29ACA1DA4B1CB00E7C0F8 /* PhoneDialer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B29AC91DA4B1CB00E7C0F8 /* PhoneDialer.swift */; };
+		26B29AD41DA4B31700E7C0F8 /* UIAlertController+KWOApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B29AD21DA4B31700E7C0F8 /* UIAlertController+KWOApp.swift */; };
+		26B29AD51DA4B31700E7C0F8 /* UIApplication+KWOApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B29AD31DA4B31700E7C0F8 /* UIApplication+KWOApp.swift */; };
+		26B29AD71DA4B34F00E7C0F8 /* Mailer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B29AD61DA4B34F00E7C0F8 /* Mailer.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		26B29A991DA4B0F000E7C0F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 264AEB071D17E8DA00F410E1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 26B29A8E1DA4B0F000E7C0F8;
+			remoteInfo = KWOToolsApp;
+		};
+		26B29AB51DA4B0FE00E7C0F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 264AEB071D17E8DA00F410E1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 26B29AAA1DA4B0FE00E7C0F8;
+			remoteInfo = KWOToolsExtension;
+		};
+		26B29AD81DA4B86700E7C0F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 264AEB071D17E8DA00F410E1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 264AEB0F1D17E8DB00F410E1;
+			remoteInfo = KWOTools;
+		};
+		26B29ADA1DA4B86B00E7C0F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 264AEB071D17E8DA00F410E1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 264AEB0F1D17E8DB00F410E1;
+			remoteInfo = KWOTools;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		262C5AFC1DA3F0D700D9D03E /* FoursquareService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareService.swift; sourceTree = "<group>"; };
@@ -69,16 +107,29 @@
 		264AEB371D17EAEB00F410E1 /* CollectionViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewDataSource.swift; sourceTree = "<group>"; };
 		264AEB381D17EAEB00F410E1 /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		264AEB391D17EAEB00F410E1 /* TableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
-		264AEB3B1D17EAEB00F410E1 /* UIAlertController+KWO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+KWO.swift"; sourceTree = "<group>"; };
 		264AEB3C1D17EAEB00F410E1 /* UIApplication+KWO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+KWO.swift"; sourceTree = "<group>"; };
 		264AEB3D1D17EAEB00F410E1 /* UIBarButtonItem+KWO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+KWO.swift"; sourceTree = "<group>"; };
 		264AEB3E1D17EAEB00F410E1 /* UIFont+KWO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+KWO.swift"; sourceTree = "<group>"; };
 		264AEB3F1D17EAEB00F410E1 /* UITraitCollection+KWO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITraitCollection+KWO.swift"; sourceTree = "<group>"; };
-		264AEB411D17EAEB00F410E1 /* Mailer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mailer.swift; sourceTree = "<group>"; };
-		264AEB421D17EAEB00F410E1 /* PhoneDialer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneDialer.swift; sourceTree = "<group>"; };
 		264AEB441D17EAEB00F410E1 /* EmptySegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptySegue.swift; sourceTree = "<group>"; };
 		264AEB461D17EAEB00F410E1 /* KWOConfigurableReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KWOConfigurableReusableView.swift; sourceTree = "<group>"; };
 		2676A3531D195B73009997E2 /* ResizableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResizableViewDataSource.swift; sourceTree = "<group>"; };
+		26B29A8F1DA4B0F000E7C0F8 /* KWOToolsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KWOToolsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		26B29A911DA4B0F000E7C0F8 /* KWOToolsApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KWOToolsApp.h; sourceTree = "<group>"; };
+		26B29A921DA4B0F000E7C0F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26B29A971DA4B0F000E7C0F8 /* KWOToolsAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KWOToolsAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		26B29A9C1DA4B0F000E7C0F8 /* KWOToolsAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KWOToolsAppTests.swift; sourceTree = "<group>"; };
+		26B29A9E1DA4B0F000E7C0F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26B29AAB1DA4B0FE00E7C0F8 /* KWOToolsExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KWOToolsExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		26B29AAD1DA4B0FE00E7C0F8 /* KWOToolsExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KWOToolsExtension.h; sourceTree = "<group>"; };
+		26B29AAE1DA4B0FE00E7C0F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26B29AB31DA4B0FE00E7C0F8 /* KWOToolsExtensionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KWOToolsExtensionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		26B29AB81DA4B0FE00E7C0F8 /* KWOToolsExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KWOToolsExtensionTests.swift; sourceTree = "<group>"; };
+		26B29ABA1DA4B0FE00E7C0F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26B29AC91DA4B1CB00E7C0F8 /* PhoneDialer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneDialer.swift; sourceTree = "<group>"; };
+		26B29AD21DA4B31700E7C0F8 /* UIAlertController+KWOApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+KWOApp.swift"; sourceTree = "<group>"; };
+		26B29AD31DA4B31700E7C0F8 /* UIApplication+KWOApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+KWOApp.swift"; sourceTree = "<group>"; };
+		26B29AD61DA4B34F00E7C0F8 /* Mailer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mailer.swift; sourceTree = "<group>"; };
 		E3C4733BC49D606F808BF664 /* Pods_KWOTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KWOTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -88,6 +139,36 @@
 			buildActionMask = 2147483647;
 			files = (
 				262C5B031DA3F26000D9D03E /* QuadratTouch.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26B29A8B1DA4B0F000E7C0F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26B29A941DA4B0F000E7C0F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26B29A981DA4B0F000E7C0F8 /* KWOToolsApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26B29AA71DA4B0FE00E7C0F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26B29AB01DA4B0FE00E7C0F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26B29AB41DA4B0FE00E7C0F8 /* KWOToolsExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +189,10 @@
 				262C5AFE1DA3F16800D9D03E /* Cartfile */,
 				264A4BAA1D17EE7E008866B0 /* KWOTools.podspec */,
 				264AEB121D17E8DB00F410E1 /* KWOTools */,
+				26B29A901DA4B0F000E7C0F8 /* KWOToolsApp */,
+				26B29A9B1DA4B0F000E7C0F8 /* KWOToolsAppTests */,
+				26B29AAC1DA4B0FE00E7C0F8 /* KWOToolsExtension */,
+				26B29AB71DA4B0FE00E7C0F8 /* KWOToolsExtensionTests */,
 				264AEB111D17E8DB00F410E1 /* Products */,
 				944021ED2EC236A676E076FD /* Frameworks */,
 			);
@@ -117,6 +202,10 @@
 			isa = PBXGroup;
 			children = (
 				264AEB101D17E8DB00F410E1 /* KWOTools.framework */,
+				26B29A8F1DA4B0F000E7C0F8 /* KWOToolsApp.framework */,
+				26B29A971DA4B0F000E7C0F8 /* KWOToolsAppTests.xctest */,
+				26B29AAB1DA4B0FE00E7C0F8 /* KWOToolsExtension.framework */,
+				26B29AB31DA4B0FE00E7C0F8 /* KWOToolsExtensionTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -202,7 +291,6 @@
 				264AEB341D17EAEB00F410E1 /* Controls */,
 				264AEB361D17EAEB00F410E1 /* DataSources */,
 				264AEB3A1D17EAEB00F410E1 /* Extensions */,
-				264AEB401D17EAEB00F410E1 /* Interfaces */,
 				264AEB431D17EAEB00F410E1 /* Segues */,
 				264AEB451D17EAEB00F410E1 /* Views */,
 			);
@@ -230,22 +318,12 @@
 		264AEB3A1D17EAEB00F410E1 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				264AEB3B1D17EAEB00F410E1 /* UIAlertController+KWO.swift */,
 				264AEB3C1D17EAEB00F410E1 /* UIApplication+KWO.swift */,
 				264AEB3D1D17EAEB00F410E1 /* UIBarButtonItem+KWO.swift */,
 				264AEB3E1D17EAEB00F410E1 /* UIFont+KWO.swift */,
 				264AEB3F1D17EAEB00F410E1 /* UITraitCollection+KWO.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		264AEB401D17EAEB00F410E1 /* Interfaces */ = {
-			isa = PBXGroup;
-			children = (
-				264AEB411D17EAEB00F410E1 /* Mailer.swift */,
-				264AEB421D17EAEB00F410E1 /* PhoneDialer.swift */,
-			);
-			path = Interfaces;
 			sourceTree = "<group>";
 		};
 		264AEB431D17EAEB00F410E1 /* Segues */ = {
@@ -272,6 +350,70 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		26B29A901DA4B0F000E7C0F8 /* KWOToolsApp */ = {
+			isa = PBXGroup;
+			children = (
+				26B29AC71DA4B1CB00E7C0F8 /* UIKit */,
+				26B29A911DA4B0F000E7C0F8 /* KWOToolsApp.h */,
+				26B29A921DA4B0F000E7C0F8 /* Info.plist */,
+			);
+			path = KWOToolsApp;
+			sourceTree = "<group>";
+		};
+		26B29A9B1DA4B0F000E7C0F8 /* KWOToolsAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				26B29A9C1DA4B0F000E7C0F8 /* KWOToolsAppTests.swift */,
+				26B29A9E1DA4B0F000E7C0F8 /* Info.plist */,
+			);
+			path = KWOToolsAppTests;
+			sourceTree = "<group>";
+		};
+		26B29AAC1DA4B0FE00E7C0F8 /* KWOToolsExtension */ = {
+			isa = PBXGroup;
+			children = (
+				26B29AAD1DA4B0FE00E7C0F8 /* KWOToolsExtension.h */,
+				26B29AAE1DA4B0FE00E7C0F8 /* Info.plist */,
+			);
+			path = KWOToolsExtension;
+			sourceTree = "<group>";
+		};
+		26B29AB71DA4B0FE00E7C0F8 /* KWOToolsExtensionTests */ = {
+			isa = PBXGroup;
+			children = (
+				26B29AB81DA4B0FE00E7C0F8 /* KWOToolsExtensionTests.swift */,
+				26B29ABA1DA4B0FE00E7C0F8 /* Info.plist */,
+			);
+			path = KWOToolsExtensionTests;
+			sourceTree = "<group>";
+		};
+		26B29AC71DA4B1CB00E7C0F8 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				26B29AD11DA4B31700E7C0F8 /* Extensions */,
+				26B29AC81DA4B1CB00E7C0F8 /* Interfaces */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		26B29AC81DA4B1CB00E7C0F8 /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				26B29AD61DA4B34F00E7C0F8 /* Mailer.swift */,
+				26B29AC91DA4B1CB00E7C0F8 /* PhoneDialer.swift */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		26B29AD11DA4B31700E7C0F8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				26B29AD21DA4B31700E7C0F8 /* UIAlertController+KWOApp.swift */,
+				26B29AD31DA4B31700E7C0F8 /* UIApplication+KWOApp.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		944021ED2EC236A676E076FD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -289,6 +431,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				264AEB141D17E8DB00F410E1 /* KWOTools.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26B29A8C1DA4B0F000E7C0F8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26B29A9F1DA4B0F000E7C0F8 /* KWOToolsApp.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26B29AA81DA4B0FE00E7C0F8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26B29ABB1DA4B0FE00E7C0F8 /* KWOToolsExtension.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,17 +472,112 @@
 			productReference = 264AEB101D17E8DB00F410E1 /* KWOTools.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		26B29A8E1DA4B0F000E7C0F8 /* KWOToolsApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26B29AA41DA4B0F000E7C0F8 /* Build configuration list for PBXNativeTarget "KWOToolsApp" */;
+			buildPhases = (
+				26B29A8A1DA4B0F000E7C0F8 /* Sources */,
+				26B29A8B1DA4B0F000E7C0F8 /* Frameworks */,
+				26B29A8C1DA4B0F000E7C0F8 /* Headers */,
+				26B29A8D1DA4B0F000E7C0F8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				26B29AD91DA4B86700E7C0F8 /* PBXTargetDependency */,
+			);
+			name = KWOToolsApp;
+			productName = KWOToolsApp;
+			productReference = 26B29A8F1DA4B0F000E7C0F8 /* KWOToolsApp.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		26B29A961DA4B0F000E7C0F8 /* KWOToolsAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26B29AA51DA4B0F000E7C0F8 /* Build configuration list for PBXNativeTarget "KWOToolsAppTests" */;
+			buildPhases = (
+				26B29A931DA4B0F000E7C0F8 /* Sources */,
+				26B29A941DA4B0F000E7C0F8 /* Frameworks */,
+				26B29A951DA4B0F000E7C0F8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				26B29A9A1DA4B0F000E7C0F8 /* PBXTargetDependency */,
+			);
+			name = KWOToolsAppTests;
+			productName = KWOToolsAppTests;
+			productReference = 26B29A971DA4B0F000E7C0F8 /* KWOToolsAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		26B29AAA1DA4B0FE00E7C0F8 /* KWOToolsExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26B29ABC1DA4B0FE00E7C0F8 /* Build configuration list for PBXNativeTarget "KWOToolsExtension" */;
+			buildPhases = (
+				26B29AA61DA4B0FE00E7C0F8 /* Sources */,
+				26B29AA71DA4B0FE00E7C0F8 /* Frameworks */,
+				26B29AA81DA4B0FE00E7C0F8 /* Headers */,
+				26B29AA91DA4B0FE00E7C0F8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				26B29ADB1DA4B86B00E7C0F8 /* PBXTargetDependency */,
+			);
+			name = KWOToolsExtension;
+			productName = KWOToolsExtension;
+			productReference = 26B29AAB1DA4B0FE00E7C0F8 /* KWOToolsExtension.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		26B29AB21DA4B0FE00E7C0F8 /* KWOToolsExtensionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26B29ABF1DA4B0FE00E7C0F8 /* Build configuration list for PBXNativeTarget "KWOToolsExtensionTests" */;
+			buildPhases = (
+				26B29AAF1DA4B0FE00E7C0F8 /* Sources */,
+				26B29AB01DA4B0FE00E7C0F8 /* Frameworks */,
+				26B29AB11DA4B0FE00E7C0F8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				26B29AB61DA4B0FE00E7C0F8 /* PBXTargetDependency */,
+			);
+			name = KWOToolsExtensionTests;
+			productName = KWOToolsExtensionTests;
+			productReference = 26B29AB31DA4B0FE00E7C0F8 /* KWOToolsExtensionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		264AEB071D17E8DA00F410E1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0800;
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Kevin Wolkober";
 				TargetAttributes = {
 					264AEB0F1D17E8DB00F410E1 = {
 						CreatedOnToolsVersion = 7.3.1;
+					};
+					26B29A8E1DA4B0F000E7C0F8 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = RBAYG54ZP6;
+						ProvisioningStyle = Automatic;
+					};
+					26B29A961DA4B0F000E7C0F8 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = RBAYG54ZP6;
+						ProvisioningStyle = Automatic;
+					};
+					26B29AAA1DA4B0FE00E7C0F8 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = RBAYG54ZP6;
+						ProvisioningStyle = Automatic;
+					};
+					26B29AB21DA4B0FE00E7C0F8 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = RBAYG54ZP6;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -341,6 +594,10 @@
 			projectRoot = "";
 			targets = (
 				264AEB0F1D17E8DB00F410E1 /* KWOTools */,
+				26B29A8E1DA4B0F000E7C0F8 /* KWOToolsApp */,
+				26B29A961DA4B0F000E7C0F8 /* KWOToolsAppTests */,
+				26B29AAA1DA4B0FE00E7C0F8 /* KWOToolsExtension */,
+				26B29AB21DA4B0FE00E7C0F8 /* KWOToolsExtensionTests */,
 			);
 		};
 /* End PBXProject section */
@@ -351,6 +608,34 @@
 			buildActionMask = 2147483647;
 			files = (
 				264A4BAB1D17EE7E008866B0 /* KWOTools.podspec in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26B29A8D1DA4B0F000E7C0F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26B29A951DA4B0F000E7C0F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26B29AA91DA4B0FE00E7C0F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26B29AB11DA4B0FE00E7C0F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,7 +669,6 @@
 				264AEB511D17EAEB00F410E1 /* NSIndexSet+KWO.swift in Sources */,
 				264AEB621D17EAEB00F410E1 /* EmptySegue.swift in Sources */,
 				264AEB4A1D17EAEB00F410E1 /* KWOLocationManager.swift in Sources */,
-				264AEB5B1D17EAEB00F410E1 /* UIAlertController+KWO.swift in Sources */,
 				262C5B001DA3F1DE00D9D03E /* FoursquareVenue.swift in Sources */,
 				264AEB531D17EAEB00F410E1 /* String+KWO.swift in Sources */,
 				264AEB571D17EAEB00F410E1 /* KWOSegmentedControl.swift in Sources */,
@@ -400,19 +684,74 @@
 				2676A3541D195B73009997E2 /* ResizableViewDataSource.swift in Sources */,
 				264AEB491D17EAEB00F410E1 /* KWOCLLocationDistance+KWO.swift in Sources */,
 				264AEB581D17EAEB00F410E1 /* CollectionViewDataSource.swift in Sources */,
-				264AEB611D17EAEB00F410E1 /* PhoneDialer.swift in Sources */,
 				264AEB5D1D17EAEB00F410E1 /* UIBarButtonItem+KWO.swift in Sources */,
 				264AEB631D17EAEB00F410E1 /* KWOConfigurableReusableView.swift in Sources */,
 				264AEB5C1D17EAEB00F410E1 /* UIApplication+KWO.swift in Sources */,
 				264AEB5E1D17EAEB00F410E1 /* UIFont+KWO.swift in Sources */,
 				264AEB521D17EAEB00F410E1 /* NSObject+KWO.swift in Sources */,
-				264AEB601D17EAEB00F410E1 /* Mailer.swift in Sources */,
 				264AEB4D1D17EAEB00F410E1 /* Stopwatch.swift in Sources */,
 				264AEB481D17EAEB00F410E1 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		26B29A8A1DA4B0F000E7C0F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26B29AD51DA4B31700E7C0F8 /* UIApplication+KWOApp.swift in Sources */,
+				26B29AD71DA4B34F00E7C0F8 /* Mailer.swift in Sources */,
+				26B29AD41DA4B31700E7C0F8 /* UIAlertController+KWOApp.swift in Sources */,
+				26B29ACA1DA4B1CB00E7C0F8 /* PhoneDialer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26B29A931DA4B0F000E7C0F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26B29A9D1DA4B0F000E7C0F8 /* KWOToolsAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26B29AA61DA4B0FE00E7C0F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26B29AAF1DA4B0FE00E7C0F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26B29AB91DA4B0FE00E7C0F8 /* KWOToolsExtensionTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		26B29A9A1DA4B0F000E7C0F8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 26B29A8E1DA4B0F000E7C0F8 /* KWOToolsApp */;
+			targetProxy = 26B29A991DA4B0F000E7C0F8 /* PBXContainerItemProxy */;
+		};
+		26B29AB61DA4B0FE00E7C0F8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 26B29AAA1DA4B0FE00E7C0F8 /* KWOToolsExtension */;
+			targetProxy = 26B29AB51DA4B0FE00E7C0F8 /* PBXContainerItemProxy */;
+		};
+		26B29AD91DA4B86700E7C0F8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 264AEB0F1D17E8DB00F410E1 /* KWOTools */;
+			targetProxy = 26B29AD81DA4B86700E7C0F8 /* PBXContainerItemProxy */;
+		};
+		26B29ADB1DA4B86B00E7C0F8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 264AEB0F1D17E8DB00F410E1 /* KWOTools */;
+			targetProxy = 26B29ADA1DA4B86B00E7C0F8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		264AEB161D17E8DB00F410E1 /* Debug */ = {
@@ -515,7 +854,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				APPLICATION_EXTENSION_API_ONLY = YES;
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
@@ -543,7 +882,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				APPLICATION_EXTENSION_API_ONLY = YES;
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
@@ -561,6 +900,160 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kevinwolkober.KWOTools;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		26B29AA01DA4B0F000E7C0F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = RBAYG54ZP6;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = KWOToolsApp/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kevinwolkober.KWOToolsApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		26B29AA11DA4B0F000E7C0F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = RBAYG54ZP6;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = KWOToolsApp/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kevinwolkober.KWOToolsApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		26B29AA21DA4B0F000E7C0F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				DEVELOPMENT_TEAM = RBAYG54ZP6;
+				INFOPLIST_FILE = KWOToolsAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kevinwolkober.KWOToolsAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		26B29AA31DA4B0F000E7C0F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				DEVELOPMENT_TEAM = RBAYG54ZP6;
+				INFOPLIST_FILE = KWOToolsAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kevinwolkober.KWOToolsAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		26B29ABD1DA4B0FE00E7C0F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = RBAYG54ZP6;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = KWOToolsExtension/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kevinwolkober.KWOToolsExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		26B29ABE1DA4B0FE00E7C0F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = RBAYG54ZP6;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = KWOToolsExtension/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kevinwolkober.KWOToolsExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		26B29AC01DA4B0FE00E7C0F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				DEVELOPMENT_TEAM = RBAYG54ZP6;
+				INFOPLIST_FILE = KWOToolsExtensionTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kevinwolkober.KWOToolsExtensionTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		26B29AC11DA4B0FE00E7C0F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				DEVELOPMENT_TEAM = RBAYG54ZP6;
+				INFOPLIST_FILE = KWOToolsExtensionTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kevinwolkober.KWOToolsExtensionTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -585,6 +1078,38 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		26B29AA41DA4B0F000E7C0F8 /* Build configuration list for PBXNativeTarget "KWOToolsApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26B29AA01DA4B0F000E7C0F8 /* Debug */,
+				26B29AA11DA4B0F000E7C0F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		26B29AA51DA4B0F000E7C0F8 /* Build configuration list for PBXNativeTarget "KWOToolsAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26B29AA21DA4B0F000E7C0F8 /* Debug */,
+				26B29AA31DA4B0F000E7C0F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		26B29ABC1DA4B0FE00E7C0F8 /* Build configuration list for PBXNativeTarget "KWOToolsExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26B29ABD1DA4B0FE00E7C0F8 /* Debug */,
+				26B29ABE1DA4B0FE00E7C0F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		26B29ABF1DA4B0FE00E7C0F8 /* Build configuration list for PBXNativeTarget "KWOToolsExtensionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26B29AC01DA4B0FE00E7C0F8 /* Debug */,
+				26B29AC11DA4B0FE00E7C0F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

@@ -27,6 +27,6 @@ open class Presenter: NSObject {
     }
 
     open func showErrorAlert(_ error: Error) {
-        UIAlertController.kwo_alert(withError: error).kwo_show()
+        fatalUnimplementedMethodError(#function, file: #file)
     }
 }

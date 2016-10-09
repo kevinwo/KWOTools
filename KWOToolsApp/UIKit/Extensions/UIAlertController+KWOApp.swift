@@ -69,7 +69,7 @@ extension UIAlertController {
     }
 
     public func kwo_show(_ presentingViewController: UIViewController? = nil) {
-        if let controller = presentingViewController ?? UIApplication.kwo_shared?.keyWindow!.rootViewController! {
+        if let controller = presentingViewController ?? UIApplication.shared.keyWindow!.rootViewController {
             controller.present(self, animated: true, completion: nil)
         }
     }
