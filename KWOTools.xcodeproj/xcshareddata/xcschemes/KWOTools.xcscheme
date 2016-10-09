@@ -28,7 +28,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "26528B811DAA386900ADA712"
+               BuildableName = "KWOToolsTests.xctest"
+               BlueprintName = "KWOToolsTests"
+               ReferencedContainer = "container:KWOTools.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "264AEB0F1D17E8DB00F410E1"
+            BuildableName = "KWOTools.framework"
+            BlueprintName = "KWOTools"
+            ReferencedContainer = "container:KWOTools.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>

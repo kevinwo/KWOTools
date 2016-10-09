@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		264A4BAB1D17EE7E008866B0 /* KWOTools.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 264A4BAA1D17EE7E008866B0 /* KWOTools.podspec */; };
 		264AEB141D17E8DB00F410E1 /* KWOTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 264AEB131D17E8DB00F410E1 /* KWOTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		264AEB471D17EAEB00F410E1 /* Speaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264AEB1D1D17EAEB00F410E1 /* Speaker.swift */; };
 		264AEB481D17EAEB00F410E1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264AEB1E1D17EAEB00F410E1 /* Constants.swift */; };
@@ -33,6 +32,11 @@
 		264AEB5F1D17EAEB00F410E1 /* UITraitCollection+KWO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264AEB3F1D17EAEB00F410E1 /* UITraitCollection+KWO.swift */; };
 		264AEB621D17EAEB00F410E1 /* EmptySegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264AEB441D17EAEB00F410E1 /* EmptySegue.swift */; };
 		264AEB631D17EAEB00F410E1 /* KWOConfigurableReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264AEB461D17EAEB00F410E1 /* KWOConfigurableReusableView.swift */; };
+		26528B851DAA386900ADA712 /* KWOToolsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26528B841DAA386900ADA712 /* KWOToolsTests.swift */; };
+		26528B871DAA386900ADA712 /* KWOTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 264AEB101D17E8DB00F410E1 /* KWOTools.framework */; };
+		26528B8D1DAA38F500ADA712 /* KWOTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 264AEB101D17E8DB00F410E1 /* KWOTools.framework */; };
+		26528B8E1DAA38FC00ADA712 /* KWOTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 264AEB101D17E8DB00F410E1 /* KWOTools.framework */; };
+		26528B911DAA392900ADA712 /* SpeakerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26528B901DAA392900ADA712 /* SpeakerTests.swift */; };
 		2676A3541D195B73009997E2 /* ResizableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2676A3531D195B73009997E2 /* ResizableViewDataSource.swift */; };
 		26B29A981DA4B0F000E7C0F8 /* KWOToolsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26B29A8F1DA4B0F000E7C0F8 /* KWOToolsApp.framework */; };
 		26B29A9D1DA4B0F000E7C0F8 /* KWOToolsAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B29A9C1DA4B0F000E7C0F8 /* KWOToolsAppTests.swift */; };
@@ -47,6 +51,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		26528B881DAA386900ADA712 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 264AEB071D17E8DA00F410E1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 264AEB0F1D17E8DB00F410E1;
+			remoteInfo = KWOTools;
+		};
 		26B29A991DA4B0F000E7C0F8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 264AEB071D17E8DA00F410E1 /* Project object */;
@@ -106,6 +117,10 @@
 		264AEB3F1D17EAEB00F410E1 /* UITraitCollection+KWO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITraitCollection+KWO.swift"; sourceTree = "<group>"; };
 		264AEB441D17EAEB00F410E1 /* EmptySegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptySegue.swift; sourceTree = "<group>"; };
 		264AEB461D17EAEB00F410E1 /* KWOConfigurableReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KWOConfigurableReusableView.swift; sourceTree = "<group>"; };
+		26528B821DAA386900ADA712 /* KWOToolsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KWOToolsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		26528B841DAA386900ADA712 /* KWOToolsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KWOToolsTests.swift; sourceTree = "<group>"; };
+		26528B861DAA386900ADA712 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26528B901DAA392900ADA712 /* SpeakerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeakerTests.swift; sourceTree = "<group>"; };
 		2676A3531D195B73009997E2 /* ResizableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResizableViewDataSource.swift; sourceTree = "<group>"; };
 		26B29A8F1DA4B0F000E7C0F8 /* KWOToolsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KWOToolsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		26B29A911DA4B0F000E7C0F8 /* KWOToolsApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KWOToolsApp.h; sourceTree = "<group>"; };
@@ -133,10 +148,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		26528B7F1DAA386900ADA712 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26528B871DAA386900ADA712 /* KWOTools.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		26B29A8B1DA4B0F000E7C0F8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26528B8D1DAA38F500ADA712 /* KWOTools.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,6 +176,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26528B8E1DAA38FC00ADA712 /* KWOTools.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,6 +196,7 @@
 			children = (
 				264A4BAA1D17EE7E008866B0 /* KWOTools.podspec */,
 				264AEB121D17E8DB00F410E1 /* KWOTools */,
+				26528B831DAA386900ADA712 /* KWOToolsTests */,
 				26B29A901DA4B0F000E7C0F8 /* KWOToolsApp */,
 				26B29A9B1DA4B0F000E7C0F8 /* KWOToolsAppTests */,
 				26B29AAC1DA4B0FE00E7C0F8 /* KWOToolsExtension */,
@@ -188,6 +214,7 @@
 				26B29A971DA4B0F000E7C0F8 /* KWOToolsAppTests.xctest */,
 				26B29AAB1DA4B0FE00E7C0F8 /* KWOToolsExtension.framework */,
 				26B29AB31DA4B0FE00E7C0F8 /* KWOToolsExtensionTests.xctest */,
+				26528B821DAA386900ADA712 /* KWOToolsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -322,6 +349,24 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		26528B831DAA386900ADA712 /* KWOToolsTests */ = {
+			isa = PBXGroup;
+			children = (
+				26528B8F1DAA391400ADA712 /* AVFoundation */,
+				26528B841DAA386900ADA712 /* KWOToolsTests.swift */,
+				26528B861DAA386900ADA712 /* Info.plist */,
+			);
+			path = KWOToolsTests;
+			sourceTree = "<group>";
+		};
+		26528B8F1DAA391400ADA712 /* AVFoundation */ = {
+			isa = PBXGroup;
+			children = (
+				26528B901DAA392900ADA712 /* SpeakerTests.swift */,
+			);
+			path = AVFoundation;
+			sourceTree = "<group>";
+		};
 		2676A3521D195B46009997E2 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -449,6 +494,24 @@
 			productReference = 264AEB101D17E8DB00F410E1 /* KWOTools.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		26528B811DAA386900ADA712 /* KWOToolsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26528B8C1DAA386900ADA712 /* Build configuration list for PBXNativeTarget "KWOToolsTests" */;
+			buildPhases = (
+				26528B7E1DAA386900ADA712 /* Sources */,
+				26528B7F1DAA386900ADA712 /* Frameworks */,
+				26528B801DAA386900ADA712 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				26528B891DAA386900ADA712 /* PBXTargetDependency */,
+			);
+			name = KWOToolsTests;
+			productName = KWOToolsTests;
+			productReference = 26528B821DAA386900ADA712 /* KWOToolsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		26B29A8E1DA4B0F000E7C0F8 /* KWOToolsApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 26B29AA41DA4B0F000E7C0F8 /* Build configuration list for PBXNativeTarget "KWOToolsApp" */;
@@ -536,6 +599,11 @@
 					264AEB0F1D17E8DB00F410E1 = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
+					26528B811DAA386900ADA712 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = RBAYG54ZP6;
+						ProvisioningStyle = Automatic;
+					};
 					26B29A8E1DA4B0F000E7C0F8 = {
 						CreatedOnToolsVersion = 8.0;
 						ProvisioningStyle = Manual;
@@ -569,6 +637,7 @@
 			projectRoot = "";
 			targets = (
 				264AEB0F1D17E8DB00F410E1 /* KWOTools */,
+				26528B811DAA386900ADA712 /* KWOToolsTests */,
 				26B29A8E1DA4B0F000E7C0F8 /* KWOToolsApp */,
 				26B29A961DA4B0F000E7C0F8 /* KWOToolsAppTests */,
 				26B29AAA1DA4B0FE00E7C0F8 /* KWOToolsExtension */,
@@ -582,7 +651,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				264A4BAB1D17EE7E008866B0 /* KWOTools.podspec in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26528B801DAA386900ADA712 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -649,6 +724,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		26528B7E1DAA386900ADA712 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26528B851DAA386900ADA712 /* KWOToolsTests.swift in Sources */,
+				26528B911DAA392900ADA712 /* SpeakerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		26B29A8A1DA4B0F000E7C0F8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -686,6 +770,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		26528B891DAA386900ADA712 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 264AEB0F1D17E8DB00F410E1 /* KWOTools */;
+			targetProxy = 26528B881DAA386900ADA712 /* PBXContainerItemProxy */;
+		};
 		26B29A9A1DA4B0F000E7C0F8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 26B29A8E1DA4B0F000E7C0F8 /* KWOToolsApp */;
@@ -818,7 +907,6 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = KWOTools/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -846,7 +934,6 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = KWOTools/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -855,6 +942,37 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kevinwolkober.KWOTools;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		26528B8A1DAA386900ADA712 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				DEVELOPMENT_TEAM = RBAYG54ZP6;
+				INFOPLIST_FILE = KWOToolsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kevinwolkober.KWOToolsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		26528B8B1DAA386900ADA712 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				DEVELOPMENT_TEAM = RBAYG54ZP6;
+				INFOPLIST_FILE = KWOToolsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kevinwolkober.KWOToolsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -1033,6 +1151,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		26528B8C1DAA386900ADA712 /* Build configuration list for PBXNativeTarget "KWOToolsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26528B8A1DAA386900ADA712 /* Debug */,
+				26528B8B1DAA386900ADA712 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		26B29AA41DA4B0F000E7C0F8 /* Build configuration list for PBXNativeTarget "KWOToolsApp" */ = {
 			isa = XCConfigurationList;
