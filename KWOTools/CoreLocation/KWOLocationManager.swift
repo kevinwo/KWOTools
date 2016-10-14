@@ -112,6 +112,7 @@ extension KWOLocationManager: CLLocationManagerDelegate {
     }
 
     public func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        self.locationManager.stopUpdatingLocation()
         NotificationCenter.default.post(name: Notification.Name(rawValue: kKWOLocationManagerDidFailUpdateLocationWithErrorNotification), object: nil)
 
         if let completion = self.findUserLocationFailureBlock {
