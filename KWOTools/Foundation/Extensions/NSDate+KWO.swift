@@ -9,11 +9,13 @@
 import Foundation
 
 extension Date {
-    public static func dateFromDouble(_ doubleDate: Double?) -> Date? {
-        if let date = doubleDate {
-            return Date(timeIntervalSince1970: TimeInterval(date))
+    public static func from(milliseconds: Double, offset: Double? = nil) -> Date? {
+        var millisecondsDate = milliseconds
+
+        if let offset = offset {
+            millisecondsDate = millisecondsDate + offset
         }
 
-        return nil
+        return Date(timeIntervalSince1970: millisecondsDate)
     }
 }
