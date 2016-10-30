@@ -9,6 +9,18 @@
 import Foundation
 
 extension String {
+    public var html2AttributedString: NSAttributedString? {
+        guard let data = data(using: .utf8) else { return nil }
+        do {
+            return try NSAttributedString(data: data, options: [NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType, NSCharacterEncodingDocumentAttribute: String.Encoding.utf8.rawValue], documentAttributes: nil)
+        } catch _ as NSError {
+            return nil
+        }
+    }
+    public var html2String: String {
+        return html2AttributedString?.string ?? ""
+    }
+
     public func fb_cleanLineBreaks() -> String {
         return self.replacingOccurrences(of: "\\n", with: "\n")
     }
