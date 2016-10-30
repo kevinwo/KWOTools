@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		26232EBC1DC5A96C006E53F0 /* Dater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26232EBB1DC5A96C006E53F0 /* Dater.swift */; };
 		263046E71DAE75AA009662D5 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 263046E61DAE75AA009662D5 /* AVFoundation.framework */; };
 		264AEB141D17E8DB00F410E1 /* KWOTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 264AEB131D17E8DB00F410E1 /* KWOTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		264AEB471D17EAEB00F410E1 /* Speaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264AEB1D1D17EAEB00F410E1 /* Speaker.swift */; };
@@ -90,6 +91,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		26232EBB1DC5A96C006E53F0 /* Dater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dater.swift; sourceTree = "<group>"; };
 		263046E61DAE75AA009662D5 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		264A4BAA1D17EE7E008866B0 /* KWOTools.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = KWOTools.podspec; sourceTree = "<group>"; };
 		264AEB101D17E8DB00F410E1 /* KWOTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KWOTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -268,6 +270,7 @@
 			children = (
 				264AEB251D17EAEB00F410E1 /* Presenter.swift */,
 				264AEB261D17EAEB00F410E1 /* Stopwatch.swift */,
+				26232EBB1DC5A96C006E53F0 /* Dater.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -711,6 +714,7 @@
 				264AEB5A1D17EAEB00F410E1 /* TableViewDataSource.swift in Sources */,
 				264AEB591D17EAEB00F410E1 /* DataSource.swift in Sources */,
 				264AEB561D17EAEB00F410E1 /* Sectionable.swift in Sources */,
+				26232EBC1DC5A96C006E53F0 /* Dater.swift in Sources */,
 				264AEB501D17EAEB00F410E1 /* NSError+KWO.swift in Sources */,
 				264AEB551D17EAEB00F410E1 /* AppInitializer.swift in Sources */,
 				264AEB4F1D17EAEB00F410E1 /* NSDate+KWO.swift in Sources */,
