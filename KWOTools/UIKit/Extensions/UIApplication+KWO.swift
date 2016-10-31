@@ -10,10 +10,10 @@ import UIKit
 
 extension UIApplication {
     public func kwo_open(_ url: URL, options: [String : Any] = [:], completionHandler completion: ((Bool) -> Swift.Void)? = nil) {
-        // @TODO Fix this to actually make it work!
-        let selector: Selector = NSSelectorFromString("_:options:completionHandler:")
-        if self.responds(to: selector) {
-            self.perform(selector)
+        if #available(iOS 10.0, *) {
+            self.open(url, options: options, completionHandler: completion)
+        } else {
+            self.openURL(url)
         }
     }
 }
