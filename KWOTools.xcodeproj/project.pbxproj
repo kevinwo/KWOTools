@@ -39,6 +39,10 @@
 		26528B8D1DAA38F500ADA712 /* KWOTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 264AEB101D17E8DB00F410E1 /* KWOTools.framework */; };
 		26528B8E1DAA38FC00ADA712 /* KWOTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 264AEB101D17E8DB00F410E1 /* KWOTools.framework */; };
 		26528B911DAA392900ADA712 /* SpeakerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26528B901DAA392900ADA712 /* SpeakerTests.swift */; };
+		265FF0471DC6E3560094AD84 /* DismissAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265FF0461DC6E3560094AD84 /* DismissAnimator.swift */; };
+		265FF0491DC6E55B0094AD84 /* DragDismissable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265FF0481DC6E55B0094AD84 /* DragDismissable.swift */; };
+		265FF04B1DC6E6CE0094AD84 /* TransitionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265FF04A1DC6E6CE0094AD84 /* TransitionInteractor.swift */; };
+		265FF0551DC6EBDC0094AD84 /* DragDismissableViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265FF0541DC6EBDC0094AD84 /* DragDismissableViewControllerPresenter.swift */; };
 		2676A3541D195B73009997E2 /* ResizableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2676A3531D195B73009997E2 /* ResizableViewDataSource.swift */; };
 		26B29A981DA4B0F000E7C0F8 /* KWOToolsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26B29A8F1DA4B0F000E7C0F8 /* KWOToolsApp.framework */; };
 		26B29A9D1DA4B0F000E7C0F8 /* KWOToolsAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B29A9C1DA4B0F000E7C0F8 /* KWOToolsAppTests.swift */; };
@@ -125,6 +129,10 @@
 		26528B841DAA386900ADA712 /* KWOToolsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KWOToolsTests.swift; sourceTree = "<group>"; };
 		26528B861DAA386900ADA712 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26528B901DAA392900ADA712 /* SpeakerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeakerTests.swift; sourceTree = "<group>"; };
+		265FF0461DC6E3560094AD84 /* DismissAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DismissAnimator.swift; sourceTree = "<group>"; };
+		265FF0481DC6E55B0094AD84 /* DragDismissable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DragDismissable.swift; sourceTree = "<group>"; };
+		265FF04A1DC6E6CE0094AD84 /* TransitionInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionInteractor.swift; sourceTree = "<group>"; };
+		265FF0541DC6EBDC0094AD84 /* DragDismissableViewControllerPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DragDismissableViewControllerPresenter.swift; sourceTree = "<group>"; };
 		2676A3531D195B73009997E2 /* ResizableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResizableViewDataSource.swift; sourceTree = "<group>"; };
 		26B29A8F1DA4B0F000E7C0F8 /* KWOToolsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KWOToolsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		26B29A911DA4B0F000E7C0F8 /* KWOToolsApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KWOToolsApp.h; sourceTree = "<group>"; };
@@ -300,6 +308,7 @@
 		264AEB331D17EAEB00F410E1 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				265FF0451DC6E32A0094AD84 /* Classes */,
 				2676A3521D195B46009997E2 /* Protocols */,
 				264AEB341D17EAEB00F410E1 /* Controls */,
 				264AEB361D17EAEB00F410E1 /* DataSources */,
@@ -373,10 +382,21 @@
 			path = AVFoundation;
 			sourceTree = "<group>";
 		};
+		265FF0451DC6E32A0094AD84 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				265FF0461DC6E3560094AD84 /* DismissAnimator.swift */,
+				265FF04A1DC6E6CE0094AD84 /* TransitionInteractor.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		2676A3521D195B46009997E2 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
 				2676A3531D195B73009997E2 /* ResizableViewDataSource.swift */,
+				265FF0481DC6E55B0094AD84 /* DragDismissable.swift */,
+				265FF0541DC6EBDC0094AD84 /* DragDismissableViewControllerPresenter.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -705,6 +725,7 @@
 			files = (
 				264AEB4C1D17EAEB00F410E1 /* Presenter.swift in Sources */,
 				264AEB4E1D17EAEB00F410E1 /* Dictionary+KWO.swift in Sources */,
+				265FF0491DC6E55B0094AD84 /* DragDismissable.swift in Sources */,
 				264AEB511D17EAEB00F410E1 /* NSIndexSet+KWO.swift in Sources */,
 				264AEB621D17EAEB00F410E1 /* EmptySegue.swift in Sources */,
 				264AEB4A1D17EAEB00F410E1 /* KWOLocationManager.swift in Sources */,
@@ -718,6 +739,7 @@
 				264AEB501D17EAEB00F410E1 /* NSError+KWO.swift in Sources */,
 				264AEB551D17EAEB00F410E1 /* AppInitializer.swift in Sources */,
 				264AEB4F1D17EAEB00F410E1 /* NSDate+KWO.swift in Sources */,
+				265FF04B1DC6E6CE0094AD84 /* TransitionInteractor.swift in Sources */,
 				264AEB471D17EAEB00F410E1 /* Speaker.swift in Sources */,
 				2676A3541D195B73009997E2 /* ResizableViewDataSource.swift in Sources */,
 				264AEB491D17EAEB00F410E1 /* KWOCLLocationDistance+KWO.swift in Sources */,
@@ -728,6 +750,8 @@
 				264AEB5E1D17EAEB00F410E1 /* UIFont+KWO.swift in Sources */,
 				264AEB521D17EAEB00F410E1 /* NSObject+KWO.swift in Sources */,
 				264AEB4D1D17EAEB00F410E1 /* Stopwatch.swift in Sources */,
+				265FF0471DC6E3560094AD84 /* DismissAnimator.swift in Sources */,
+				265FF0551DC6EBDC0094AD84 /* DragDismissableViewControllerPresenter.swift in Sources */,
 				264AEB481D17EAEB00F410E1 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
