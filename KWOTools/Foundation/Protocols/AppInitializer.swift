@@ -9,5 +9,5 @@
 import Foundation
 
 public protocol AppInitializer {
-    func perform()
+    func perform(with launchOptions: [AnyHashable: Any]!)
 }
