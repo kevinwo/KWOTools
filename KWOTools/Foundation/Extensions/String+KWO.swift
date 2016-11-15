@@ -25,6 +25,26 @@ extension String {
         return self.replacingOccurrences(of: "\\n", with: "\n")
     }
 
+    public var meetupHtml2String: String {
+        var plainString = self
+
+        plainString = plainString.replacingOccurrences(of: "<p><img[^>]+></p>", with: "", options: .regularExpression, range: nil)
+        plainString = plainString.replacingOccurrences(of: "<p>", with: "", options: .regularExpression, range: nil)
+        plainString = plainString.replacingOccurrences(of: "</p>", with: "\n\n", options: .regularExpression, range: nil)
+        plainString = plainString.replacingOccurrences(of: "<br />", with: "\n", options: .regularExpression, range: nil)
+        plainString = plainString.replacingOccurrences(of: "<br/>", with: "\n", options: .regularExpression, range: nil)
+        plainString = plainString.replacingOccurrences(of: "<br>", with: "\n", options: .regularExpression, range: nil)
+        plainString = plainString.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
+        plainString = plainString.replacingOccurrences(of: "  ", with: "", options: .regularExpression, range: nil)
+        plainString = plainString.replacingOccurrences(of: "   ", with: "", options: .regularExpression, range: nil)
+        plainString = plainString.replacingOccurrences(of: "\n ", with: "\n", options: .regularExpression, range: nil)
+        plainString = plainString.replacingOccurrences(of: "\n  ", with: "\n", options: .regularExpression, range: nil)
+        plainString = plainString.replacingOccurrences(of: "\n   ", with: "\n", options: .regularExpression, range: nil)
+        plainString = plainString.replacingOccurrences(of: "\n    ", with: "\n", options: .regularExpression, range: nil)
+
+        return plainString.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+    }
+
     public var kwo_localized: String {
         #if !os(OSX)
             return NSLocalizedString(self, tableName: nil, bundle: Bundle.main, value: "", comment: "")
