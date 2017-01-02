@@ -13,7 +13,7 @@ import UIKit.UIAlertController
 }
 
 extension UIAlertController {
-    public class func kwo_alert(withError error: Error) -> UIAlertController {
+    public class func kwo_alert(with error: Error) -> UIAlertController {
         let title = error.localizedDescription
         let message = ((error as NSError).localizedRecoverySuggestion != nil) ? (error as NSError).localizedRecoverySuggestion : (error as NSError).localizedFailureReason
         let alertVC = UIAlertController(title: title, message: message, preferredStyle: .alert)

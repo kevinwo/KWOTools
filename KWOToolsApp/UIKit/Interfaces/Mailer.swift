@@ -46,7 +46,7 @@ open class Mailer: NSObject {
                 message = "This device is not configured to send mail."
             }
 
-            UIAlertController.kwo_alert(withError: NSError.kwo_error(withTitle: "System mail not configured", message: message)).kwo_show(self.presentingController)
+            UIAlertController.kwo_alert(with: NSError.kwo_error(withTitle: "System mail not configured", message: message)).kwo_show(self.presentingController)
         }
     }
 }
