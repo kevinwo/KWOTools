@@ -35,7 +35,7 @@ open class DataSource: NSObject {
         super.init()
     }
 
-    open func objectAtIndexPath(_ indexPath: IndexPath) -> AnyObject {
+    open func object(at indexPath: IndexPath) -> AnyObject {
         return self.sections[indexPath.section][indexPath.row]
     }
 
