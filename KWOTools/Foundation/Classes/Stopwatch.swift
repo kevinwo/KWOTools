@@ -28,7 +28,7 @@ open class Stopwatch: NSObject {
 
     // MARK: Private interface
 
-    func timerFired() {
+    @objc func timerFired() {
         self.timeElapsed += 0.01
     }
 }
