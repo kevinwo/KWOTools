@@ -10,7 +10,7 @@ import Foundation
 
 extension NSObject {
     public static var className: String {
-        let components = String.init(describing: self).characters.split{$0 == "."}.map(String.init)
+        let components = String.init(describing: self).split{$0 == "."}.map(String.init)
 
         return components.last!
     }

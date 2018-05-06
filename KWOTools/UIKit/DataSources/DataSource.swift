@@ -47,7 +47,7 @@ open class DataSource: NSObject {
 
         for (i, object) in objects.enumerated() {
             let name = object.sectioningName
-            let firstChar = name.substring(to: name.characters.index(name.startIndex, offsetBy: 1)).uppercased()
+            let firstChar = String(name[..<name.index(name.startIndex, offsetBy: 1)])
 
             if firstChar != currentCharInTitle {
                 if currentSectionArray.count > 0 {

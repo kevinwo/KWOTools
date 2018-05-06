@@ -54,7 +54,7 @@ extension String {
     }
 
     public var kwo_length: Int {
-        return self.characters.count
+        return self.count
     }
 
     public var kwo_isUppercase: Bool {
@@ -66,7 +66,7 @@ extension String {
     }
 
     public mutating func kwo_insert(_ string: String, atIndex index: Int) {
-        self.insert(contentsOf: string.characters, at: self.index(self.startIndex, offsetBy: index))
+        self.insert(contentsOf: string, at: self.index(self.startIndex, offsetBy: index))
     }
 
     public func kwo_regex(_ pattern: String) -> [NSTextCheckingResult] {
