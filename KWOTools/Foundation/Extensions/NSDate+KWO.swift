@@ -19,3 +19,12 @@ extension Date {
         return Date(timeIntervalSince1970: millisecondsDate)
     }
 }
+
+//public func ==(lhs: Date, rhs: Date) -> Bool {
+//    return lhs === rhs || lhs.compare(rhs) == .OrderedSame
+//}
+//
+//public func <(lhs: Date, rhs: Date) -> Bool {
+//    return lhs.compare(rhs) == .OrderedAscending
+//}
+
