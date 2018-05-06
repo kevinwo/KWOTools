@@ -8,22 +8,26 @@
 
 import UIKit
 
+public typealias KWOCollectionViewDataSourceCellConfigurationBlock = (_ cell: UICollectionViewCell, _ object: AnyObject, _ indexPath: IndexPath) -> Void
+public typealias KWOCollectionViewDataSourceSupplementaryViewConfigurationBlock = (_ cell: UICollectionReusableView, _ object: AnyObject) -> Void
+
 open class CollectionViewDataSource: DataSource {
 
-    open weak var collectionView: UICollectionView!
-
-    convenience public init(collectionView: UICollectionView, sections: [[AnyObject]]) {
-        self.init(collectionView: collectionView)
-        self.sections = sections
-    }
-
-    public init(collectionView: UICollectionView, items: [AnyObject]? = nil, cellReuseIdentifier: String? = nil, cellDelegate: AnyObject? = nil) {
+    public weak var collectionView: UICollectionView!
+    var cellConfigurationBlock: KWOCollectionViewDataSourceCellConfigurationBlock
+    
+    public init(
+        collectionView: UICollectionView,
+        items: [AnyObject],
+        cellConfigurationBlock: @escaping KWOCollectionViewDataSourceCellConfigurationBlock,
+        cellReuseIdentifier: String? = nil) {
         self.collectionView = collectionView
-        super.init(items: items, cellReuseIdentifier: cellReuseIdentifier, cellDelegate: cellDelegate)
+        self.cellConfigurationBlock = cellConfigurationBlock
+        super.init(items: items, cellReuseIdentifier: cellReuseIdentifier)
         self.collectionView.dataSource = self
     }
-
-    open func reload() {
+    
+    public func reload() {
         self.collectionView.reloadData()
     }
 }
@@ -32,23 +36,18 @@ extension CollectionViewDataSource: UICollectionViewDataSource {
     open func numberOfSections(in collectionView: UICollectionView) -> Int {
         return self.sections.count
     }
-
+    
     open func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.sections[section].count
     }
-
+    
     open func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let object = self.sections[indexPath.section][indexPath.row]
         let reuseIdentifier = self.cellReuseIdentifier ?? Mirror.classNameForObject(object)
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-        let reusableView = cell as! KWOConfigurableReusableView
-
-        if self.cellDelegate != nil {
-            reusableView.setDelegate?(self.cellDelegate!)
-        }
-
-        reusableView.configure(object)
-
-        return reusableView as! UICollectionViewCell
+        
+        self.cellConfigurationBlock(cell, object, indexPath)
+        
+        return cell
     }
 }

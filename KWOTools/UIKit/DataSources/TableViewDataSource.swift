@@ -20,10 +20,10 @@ open class TableViewDataSource: DataSource {
         self.sections = sections
     }
 
-    public init(tableView: UITableView, items: [AnyObject]? = nil, cellReuseIdentifier: String? = nil, cellConfigurationBlock: KWOTableViewDataSourceCellConfigurationBlock? = nil, cellDelegate: AnyObject? = nil) {
+    public init(tableView: UITableView, items: [AnyObject]? = nil, cellReuseIdentifier: String? = nil, cellConfigurationBlock: KWOTableViewDataSourceCellConfigurationBlock? = nil) {
         self.tableView = tableView
         self.cellConfigurationBlock = cellConfigurationBlock
-        super.init(items: items, cellReuseIdentifier: cellReuseIdentifier, cellDelegate: cellDelegate)
+        super.init(items: items, cellReuseIdentifier: cellReuseIdentifier)
         self.tableView.dataSource = self
     }
 
@@ -61,19 +61,8 @@ extension TableViewDataSource: UITableViewDataSource {
         let object = self.sections[indexPath.section][indexPath.row]
         let reuseIdentifier = self.cellReuseIdentifier ?? Mirror.classNameForObject(object)
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath)
-        let reusableView = cell as! KWOConfigurableReusableView
 
-        if self.cellConfigurationBlock != nil {
-            self.cellConfigurationBlock!(cell, object)
-        } else {
-            if self.cellDelegate != nil {
-                reusableView.setDelegate?(self.cellDelegate!)
-            }
-
-            reusableView.configure(object)
-
-            return reusableView as! UITableViewCell
-        }
+        self.cellConfigurationBlock!(cell, object)
 
         return cell
     }

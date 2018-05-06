@@ -14,7 +14,6 @@ open class DataSource: NSObject {
         return [String]()
     }()
     var cellReuseIdentifier: String?
-    weak var cellDelegate: AnyObject?
     open var items: [AnyObject]? {
         get {
             return self.sections.flatMap({ $0 }) as [AnyObject]?
@@ -24,14 +23,13 @@ open class DataSource: NSObject {
         }
     }
 
-    init(items: [AnyObject]? = nil, cellReuseIdentifier: String? = nil, cellDelegate: AnyObject? = nil) {
+    init(items: [AnyObject]? = nil, cellReuseIdentifier: String? = nil) {
         self.sections = [[AnyObject]]()
         if let items = items {
             self.sections.append(items)
         }
 
         self.cellReuseIdentifier = cellReuseIdentifier
-        self.cellDelegate = cellDelegate
         super.init()
     }
 
