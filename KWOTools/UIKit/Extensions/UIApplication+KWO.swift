@@ -16,4 +16,8 @@ extension UIApplication {
             self.openURL(url)
         }
     }
+
+    public func kwo_forceEndEditing() {
+        UIApplication.shared.keyWindow?.endEditing(true)
+    }
 }
