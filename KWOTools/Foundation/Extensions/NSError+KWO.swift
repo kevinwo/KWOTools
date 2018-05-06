@@ -10,6 +10,25 @@ import Foundation
 
 extension NSError {
 
+    public var title: String? {
+        get {
+            if let reason = self.userInfo[NSLocalizedFailureReasonErrorKey] as? String {
+                return reason
+            } else if let description = self.userInfo[NSLocalizedDescriptionKey] as? String {
+                return description
+            }
+            return nil
+        }
+    }
+    public var recoverySuggestion: String? {
+        get {
+            if let reason = self.userInfo[NSLocalizedRecoverySuggestionErrorKey] as? String {
+                return reason
+            }
+            return nil
+        }
+    }
+    
     public static var kwo_internetConnectionError: NSError {
         get {
             return NSError.kwo_error(withTitle: "Your Internet connection appears to be offline. Please connect and try again.", domain: kKWOErrorDomain)
@@ -17,7 +36,7 @@ extension NSError {
     }
 
     public class func kwo_error(withTitle title: String, message: String? = nil, domain: String = "KWOErrorDomain", code: Int = 0) -> NSError {
-        var userInfo = [NSLocalizedDescriptionKey: title]
+        var userInfo = [NSLocalizedFailureReasonErrorKey: title]
 
         if message != nil {
             userInfo[NSLocalizedRecoverySuggestionErrorKey] = message
