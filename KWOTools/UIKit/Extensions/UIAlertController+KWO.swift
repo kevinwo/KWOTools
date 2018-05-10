@@ -11,9 +11,9 @@ import UIKit.UIAlertController
 public typealias KWOAlertHandlerBlock = () -> Void
 
 extension UIAlertController {
-    public static func kwo_errorAlert(_ error: NSError) -> UIAlertController {
-        let controller = UIAlertController(title: error.localizedFailureReason, message: error.localizedRecoverySuggestion ?? error.localizedDescription, preferredStyle: .alert)
-        let action = UIAlertAction(title: "OK".kwo_localized, style: .default, handler: nil)
+    public static func kwo_errorAlert(_ error: NSError, buttonTitle: String = "OK") -> UIAlertController {
+        let controller = UIAlertController(title: error.localizedFailureReason, message: error.localizedRecoverySuggestion, preferredStyle: .alert)
+        let action = UIAlertAction(title: buttonTitle, style: .default, handler: nil)
         controller.addAction(action)
 
         return controller
