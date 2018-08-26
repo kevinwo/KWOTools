@@ -67,11 +67,11 @@ extension TableViewDataSource: UITableViewDataSource {
         return cell
     }
 
-    public func sectionIndexTitles(for tableView: UITableView) -> [String]? {
+    open func sectionIndexTitles(for tableView: UITableView) -> [String]? {
         return self.sectionTitles.isEmpty ? nil : self.sectionTitles
     }
 
-    public func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    open func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return self.sectionTitles.isEmpty ? nil : self.sectionTitles[section]
     }
 }
