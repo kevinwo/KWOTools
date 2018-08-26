@@ -9,7 +9,7 @@
 import UIKit
 
 open class DataSource: NSObject {
-    var sections: [[AnyObject]]!
+    public var sections: [[AnyObject]]!
     open lazy var sectionTitles: [String] = {
         return [String]()
     }()
