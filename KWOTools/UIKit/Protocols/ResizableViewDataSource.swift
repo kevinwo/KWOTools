@@ -34,7 +34,7 @@ extension ResizableViewDataSource {
         }
 
         sizingView!.configure(object)
-        let size = sizingView!.systemLayoutSizeFittingSize(UILayoutFittingCompressedSize)
+        let size = sizingView!.systemLayoutSizeFittingSize(UIView.layoutFittingCompressedSize)
         let height = self.resizableViewHeight ?? sizingView!.frame.height
 
         return CGSize(width: size.width, height: height)

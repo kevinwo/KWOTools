@@ -9,12 +9,8 @@
 import UIKit
 
 extension UIApplication {
-    public func kwo_open(_ url: URL, options: [String : Any] = [:], completionHandler completion: ((Bool) -> Swift.Void)? = nil) {
-        if #available(iOS 10.0, *) {
-            self.open(url, options: options, completionHandler: completion)
-        } else {
-            self.openURL(url)
-        }
+    public func kwo_open(_ url: URL, options: [UIApplication.OpenExternalURLOptionsKey : Any] = [:], completionHandler completion: ((Bool) -> Swift.Void)? = nil) {
+        self.open(url, options: options, completionHandler: completion)
     }
 
     public func kwo_forceEndEditing() {
