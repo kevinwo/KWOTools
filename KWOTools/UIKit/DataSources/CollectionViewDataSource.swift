@@ -6,6 +6,7 @@
 //  Copyright © 2016 Kevin Wolkober. All rights reserved.
 //
 
+#if !os(watchOS)
 import UIKit
 
 public typealias KWOCollectionViewDataSourceCellConfigurationBlock = (_ cell: UICollectionViewCell, _ object: AnyObject, _ indexPath: IndexPath) -> Void
@@ -51,3 +52,4 @@ extension CollectionViewDataSource: UICollectionViewDataSource {
         return cell
     }
 }
+#endif

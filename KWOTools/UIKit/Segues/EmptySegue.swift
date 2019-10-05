@@ -6,6 +6,7 @@
 //  Copyright © 2016 Kevin Wolkober. All rights reserved.
 //
 
+#if os(iOS)
 import UIKit
 
 open class EmptySegue: UIStoryboardSegue {
@@ -14,3 +15,4 @@ open class EmptySegue: UIStoryboardSegue {
         // Nothing
     }
 }
+#endif

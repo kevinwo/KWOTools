@@ -9,6 +9,7 @@
 //  Adapted by Kevin Wolkober on 10/31/16.
 //
 
+#if os(iOS)
 import UIKit
 
 public protocol DragDismissable: NSObjectProtocol {
@@ -57,3 +58,4 @@ extension DragDismissable where Self: UIViewController {
         }
     }
 }
+#endif

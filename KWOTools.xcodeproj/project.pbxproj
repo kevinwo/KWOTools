@@ -97,7 +97,7 @@
 /* Begin PBXFileReference section */
 		26232EBB1DC5A96C006E53F0 /* Dater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dater.swift; sourceTree = "<group>"; };
 		263046E61DAE75AA009662D5 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		264A4BAA1D17EE7E008866B0 /* KWOTools.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = KWOTools.podspec; sourceTree = "<group>"; };
+		264A4BAA1D17EE7E008866B0 /* KWOTools.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = KWOTools.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		264AEB101D17E8DB00F410E1 /* KWOTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KWOTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		264AEB131D17E8DB00F410E1 /* KWOTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KWOTools.h; sourceTree = "<group>"; };
 		264AEB151D17E8DB00F410E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };

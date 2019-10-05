@@ -1,12 +1,6 @@
-//
-//  Router.swift
-//  KWOTools
-//
-//  Created by Kevin Wolkober on 3/27/18.
-//
-
 import UIKit
 
+#if !os(watchOS)
 public protocol Router: NSObjectProtocol {
 
     associatedtype T: UIViewController
@@ -14,3 +8,4 @@ public protocol Router: NSObjectProtocol {
     var view: T! { get set }
     init(view: T)
 }
+#endif

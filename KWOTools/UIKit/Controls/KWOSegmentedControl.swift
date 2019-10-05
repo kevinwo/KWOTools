@@ -6,6 +6,7 @@
 //  Copyright © 2016 Kevin Wolkober. All rights reserved.
 //
 
+#if !os(watchOS)
 import UIKit
 
 open class KWOSegmentedControl: UISegmentedControl {
@@ -44,3 +45,4 @@ open class KWOSegmentedControl: UISegmentedControl {
         fatalError("init(coder:) has not been implemented")
     }
 }
+#endif

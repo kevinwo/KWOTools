@@ -6,6 +6,7 @@
 //  Copyright © 2016 Kevin Wolkober. All rights reserved.
 //
 
+#if os(iOS)
 import UIKit
 
 public protocol DragDismissableViewControllerPresenter: UIViewControllerTransitioningDelegate {
@@ -21,3 +22,4 @@ extension DragDismissableViewControllerPresenter where Self: UIViewController {
         return self.transitionInteractor.hasStarted ? self.transitionInteractor : nil
     }
 }
+#endif

@@ -8,6 +8,7 @@
 //  Copyright © 2016 Kevin Wolkober. All rights reserved.
 //
 
+#if !os(watchOS)
 import UIKit
 
 extension UITraitCollection {
@@ -27,3 +28,4 @@ extension UITraitCollection {
         return false
     }
 }
+#endif

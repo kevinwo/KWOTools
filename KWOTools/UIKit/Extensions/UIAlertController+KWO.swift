@@ -5,6 +5,7 @@
 //  Created by Kevin Wolkober on 1/1/18.
 //
 
+#if !os(watchOS)
 import UIKit.UIViewController
 import UIKit.UIAlertController
 
@@ -48,3 +49,4 @@ extension UIAlertController {
         controller.present(self, animated: true, completion: nil)
     }
 }
+#endif

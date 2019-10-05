@@ -128,6 +128,8 @@ extension KWOLocationManager: CLLocationManagerDelegate {
     // MARK: Private interface
 
     fileprivate func findUserLocation() {
+        #if !os(tvOS)
         self.locationManager.startUpdatingLocation()
+        #endif
     }
 }

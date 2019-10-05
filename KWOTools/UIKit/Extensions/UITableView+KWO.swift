@@ -5,6 +5,7 @@
 //  Created by Kevin Wolkober on 4/27/18.
 //
 
+#if !os(watchOS)
 import UIKit
 
 extension UITableView {
@@ -18,3 +19,4 @@ extension UITableView {
         }, completion: nil);
     }
 }
+#endif

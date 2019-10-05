@@ -5,6 +5,7 @@
 //  Created by Kevin Wolkober on 2/21/18.
 //
 
+#if !os(watchOS)
 import UIKit
 
 extension UIView {
@@ -14,3 +15,4 @@ extension UIView {
         }
     }
 }
+#endif

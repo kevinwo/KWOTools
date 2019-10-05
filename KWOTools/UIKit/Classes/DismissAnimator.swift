@@ -9,6 +9,7 @@
 //  Adapted by Kevin Wolkober on 10/31/16.
 //
 
+#if os(iOS)
 import UIKit
 
 public class DismissAnimator: NSObject {
@@ -52,3 +53,4 @@ extension DismissAnimator: UIViewControllerAnimatedTransitioning {
         )
     }
 }
+#endif

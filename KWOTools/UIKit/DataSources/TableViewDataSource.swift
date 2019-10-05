@@ -6,6 +6,7 @@
 //  Copyright © 2016 Kevin Wolkober. All rights reserved.
 //
 
+#if !os(watchOS)
 import UIKit
 
 public typealias KWOTableViewDataSourceCellConfigurationBlock = (_ cell: UITableViewCell, _ object: AnyObject) -> Void
@@ -75,3 +76,4 @@ extension TableViewDataSource: UITableViewDataSource {
         return self.sectionTitles.isEmpty ? nil : self.sectionTitles[section]
     }
 }
+#endif

@@ -9,6 +9,7 @@
 //  Adapted by Kevin Wolkober on 10/31/16.
 //
 
+#if os(iOS)
 import Foundation
 
 public class TransitionInteractor: UIPercentDrivenInteractiveTransition {
@@ -20,3 +21,4 @@ public class TransitionInteractor: UIPercentDrivenInteractiveTransition {
         self.transitionDuration = transitionDuration
     }
 }
+#endif

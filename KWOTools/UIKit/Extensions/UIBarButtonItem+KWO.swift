@@ -6,6 +6,7 @@
 //  Copyright © 2016 Kevin Wolkober. All rights reserved.
 //
 
+#if !os(watchOS)
 import UIKit.UIBarButtonItem
 
 extension UIBarButtonItem {
@@ -16,3 +17,4 @@ extension UIBarButtonItem {
         return item
     }
 }
+#endif

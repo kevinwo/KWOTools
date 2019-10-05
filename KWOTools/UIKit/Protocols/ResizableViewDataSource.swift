@@ -6,6 +6,7 @@
 //  Copyright © 2016 Kevin Wolkober. All rights reserved.
 //
 
+#if !os(watchOS)
 import UIKit
 
 @objc public protocol ViewResizable: NSObjectProtocol {
@@ -40,3 +41,4 @@ extension ResizableViewDataSource {
         return CGSize(width: size.width, height: height)
     }
 }
+#endif
