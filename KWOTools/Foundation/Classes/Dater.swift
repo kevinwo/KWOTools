@@ -13,7 +13,7 @@ public class Dater {
     public var rawDate: Date
     fileprivate var formatter = DateFormatter()
 
-    public init(date: Date, timeZone: TimeZone = TimeZone(secondsFromGMT: 0)!) {
+    public init(date: Date, timeZone: TimeZone = TimeZone.current) {
         self.rawDate = date
         self.formatter.timeZone = timeZone
     }

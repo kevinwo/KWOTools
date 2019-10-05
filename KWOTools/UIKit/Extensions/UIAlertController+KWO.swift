@@ -31,7 +31,7 @@ extension UIAlertController {
         let alertVC = UIAlertController(title: title, message: message, preferredStyle: .alert)
 
         if let title = confirmationTitle {
-            let style: UIAlertActionStyle = isDestructive ? .destructive : .default
+            let style: UIAlertAction.Style = isDestructive ? .destructive : .default
             alertVC.addAction(UIAlertAction(title: title, style: style, handler: { (action) -> Void in
                 confirmationHandler?()
             }))
