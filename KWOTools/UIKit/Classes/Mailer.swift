@@ -1,61 +1,87 @@
-//
-//  Mailer.swift
-//  Branch
-//
-//  Created by Kevin Wolkober on 2/24/18.
-//
-
+#if os(iOS)
 import UIKit
 import MessageUI
 
-open class Mailer: NSObject {
+public protocol MailerType {
 
-    private weak var presentingController: UIViewController!
-    private var completion: ((_ error: Error?) -> Void)?
+    static func canSendMail() -> Bool
+    func composer(_ recipients: [String], subject: String?, body: String?, completion: ((_ error: AlertableError?) -> Void)?) throws -> UIViewController
+}
 
-    public init(presentingController: UIViewController) {
-        self.presentingController = presentingController
-        super.init()
+public class Mailer: NSObject, MailerType {
+
+    // MARK: - Enums
+
+    public enum Error: AlertableError {
+        case composerError
+        case deviceNotConfigured([String])
+
+        public var alertTitle: String {
+            switch self {
+            case .composerError:
+                return "Mail could not be sent."
+            case .deviceNotConfigured(_):
+                return "System mail not configured"
+            }
+        }
+
+        public var alertMessage: String? {
+            switch self {
+            case .composerError:
+                return "Please close the composer, reopen, and try again."
+            case .deviceNotConfigured(let recipients):
+                let message = { () -> String in
+                    if let recipient = recipients.first {
+                        return "This device is not configured to send mail. Please send an email to \(recipient)"
+                    } else {
+                        return "This device is not configured to send mail."
+                    }
+                }()
+                return message
+            }
+        }
     }
+
+    // MARK: - Properties
+
+    private var completion: ((_ error: AlertableError?) -> Void)?
+
+    // MARK: - Public interface
 
     public static func canSendMail() -> Bool {
         return MFMailComposeViewController.canSendMail()
     }
 
-    open func sendEmail(_ recipients: [String], subject: String? = nil, body: String? = nil, completion: ((_ error: Error?) -> Void)?) {
-        if Mailer.canSendMail() {
-            let controller = MFMailComposeViewController()
-            controller.mailComposeDelegate = self
-            controller.setToRecipients(recipients)
-            controller.modalPresentationStyle = .formSheet
+    public func composer(_ recipients: [String], subject: String?, body: String?, completion: ((_ error: AlertableError?) -> Void)?) throws -> UIViewController {
+        self.completion = completion
 
-            if let text = subject {
-                controller.setSubject(text)
-            }
-
-            if let text = body {
-                controller.setMessageBody(text, isHTML: false)
-            }
-
-            self.completion = completion
-            self.presentingController.present(controller, animated: true, completion: nil)
-        } else {
-            var message: String
-            
-            if let recipient = recipients.first {
-                message = "This device is not configured to send mail. Please send an email to \(recipient)"
-            } else {
-                message = "This device is not configured to send mail."
-            }
-            
-            UIAlertController.kwo_errorAlert(NSError.kwo_error(withTitle: "System mail not configured", message: message)).kwo_show(in: self.presentingController)
+        guard Mailer.canSendMail() else {
+            throw Error.deviceNotConfigured(recipients)
         }
+
+        let controller = MFMailComposeViewController()
+        controller.mailComposeDelegate = self
+        controller.setToRecipients(recipients)
+        controller.modalPresentationStyle = .formSheet
+
+        if let text = subject {
+            controller.setSubject(text)
+        }
+
+        if let text = body {
+            controller.setMessageBody(text, isHTML: false)
+        }
+
+
+        return controller
     }
 }
 
 extension Mailer: MFMailComposeViewControllerDelegate {
+
     public func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
-        self.completion?(error)
+        // @TODO: Convert local error into an appropriate set of alertable errors.
+        self.completion?(Error.composerError)
     }
 }
-
+#endif
