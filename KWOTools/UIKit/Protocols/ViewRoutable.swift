@@ -1,5 +1,30 @@
 import UIKit
 
+public struct KWOAlert {
+    public let title: String
+    public let message: String?
+    public let confirmButtonTitle: String
+    public let cancelButtonTitle: String
+    public let confirmAction: (() -> Void)?
+    public let cancelAction: (() -> Void)?
+
+    public init(
+        title: String,
+        message: String?,
+        confirmButtonTitle: String = "Confirm",
+        cancelButtonTitle: String = "OK",
+        confirmAction: (() -> Void)? = nil,
+        cancelAction: (() -> Void)? = nil
+    ) {
+        self.title = title
+        self.message = message
+        self.confirmButtonTitle = confirmButtonTitle
+        self.cancelButtonTitle = cancelButtonTitle
+        self.confirmAction = confirmAction
+        self.cancelAction = cancelAction
+    }
+}
+
 public protocol ViewRoutable: AnyObject {
 
     func present(view: ViewRoutable, animated flag: Bool, completion: (() -> Void)?)
@@ -20,8 +45,12 @@ extension ViewRoutable where Self: UIViewController {
     }
 
     public func presentAlert(for error: AlertableError) {
-        let controller = UIAlertController(title: error.alertTitle, message: error.alertMessage, preferredStyle: .alert)
-        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        let alert = KWOAlert(title: error.alertTitle, message: error.alertMessage)
+    }
+
+    public func presentAlert(_ alert: KWOAlert) {
+        let controller = UIAlertController(title: alert.title, message: alert.message, preferredStyle: .alert)
+        let action = UIAlertAction(title: alert.cancelButtonTitle, style: .default, handler: nil)
         controller.addAction(action)
 
         present(controller, animated: true, completion: nil)
