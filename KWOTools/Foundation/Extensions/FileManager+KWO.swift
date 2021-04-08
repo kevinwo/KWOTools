@@ -21,4 +21,21 @@ extension FileManager {
     public static func canAccessAppGroup(_ identifier: String) -> Bool {
         return FileManager.default.isReadableFile(atPath: self.appGroupURL(identifier).path)
     }
+
+    public static func creationDate(forItemAt url: URL) -> Date? {
+        guard let attributes = try? FileManager.default.attributesOfItem(atPath: url.path)
+        else {
+            return nil
+        }
+
+        return attributes[.creationDate] as? Date
+    }
+
+    public static var documentsDirectoryCreationDate: Date? {
+        guard let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last else {
+            return nil
+        }
+
+        return creationDate(forItemAt: documentsURL)
+    }
 }

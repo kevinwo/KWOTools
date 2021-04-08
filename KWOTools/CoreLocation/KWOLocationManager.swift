@@ -1,13 +1,6 @@
-//
-//  KWOLocationManager.swift
-//  KWOTools
-//
-//  Created by Kevin Wolkober on 5/14/16.
-//  Copyright © 2016 Kevin Wolkober. All rights reserved.
-//
-
 import CoreLocation
 
+public let kKWOLocationManagerDidChangeAuthorizationStatusNotification = "kKWOLocationManagerDidChangeAuthorizationStatusNotification"
 public let kKWOLocationManagerDidUpdateLocationNotification = "kKWOLocationManagerDidUpdateLocationNotification"
 public let kKWOLocationManagerDidUpdatePlacemarkNotification = "kKWOLocationManagerDidUpdatePlacemarkNotification"
 public let kKWOLocationManagerDidFailUpdateLocationWithErrorNotification = "kKWOLocationManagerDidFailUpdateLocationWithErrorNotification"
@@ -15,6 +8,7 @@ public let kKWOLocationManagerDidFailUpdatePlacemarkWithErrorNotification = "kKW
 
 public let KWOLocationErrorCodeDenied: Int = 1000
 
+public typealias KWOFindUserLocationPromptAuthorizationBlock = (() -> Void)?
 public typealias KWOFindUserLocationSuccessBlock = ((_ location: CLLocation) -> Void)?
 public typealias KWOFindUserLocationFailureBlock = ((_ error: NSError) -> Void)?
 
@@ -22,6 +16,8 @@ open class KWOLocationManager: NSObject {
 
     open var currentLocation: CLLocation?
     open var currentPlacemark: CLPlacemark?
+    open var error: Error?
+    fileprivate var findUserPromptAuthorizationBlock: KWOFindUserLocationPromptAuthorizationBlock?
     fileprivate var findUserLocationSuccessBlock: KWOFindUserLocationSuccessBlock?
     fileprivate var findUserLocationFailureBlock: KWOFindUserLocationFailureBlock?
     fileprivate var restrictedError: NSError {
@@ -44,11 +40,16 @@ open class KWOLocationManager: NSObject {
         return manager
     }()
     let geocoder = CLGeocoder()
-
-    open func findMyLocation(_ success: KWOFindUserLocationSuccessBlock? = nil, failure: KWOFindUserLocationFailureBlock? = nil) {
+    
+    open func findMyLocation(promptAuthorization: KWOFindUserLocationPromptAuthorizationBlock? = nil, success: KWOFindUserLocationSuccessBlock? = nil, failure: KWOFindUserLocationFailureBlock? = nil) {
+        self.findUserPromptAuthorizationBlock = promptAuthorization
         self.findUserLocationSuccessBlock = success
         self.findUserLocationFailureBlock = failure
         self.findLocation(withAuthorizationStatus: CLLocationManager.authorizationStatus())
+    }
+    
+    open func requestWhenInUseAuthorization() {
+        locationManager.requestWhenInUseAuthorization()
     }
 
     open func currentLocationDistance(_ latitude: Double, longitude: Double) -> CLLocationDistance? {
@@ -122,6 +123,7 @@ extension KWOLocationManager: CLLocationManagerDelegate {
     }
 
     public func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        NotificationCenter.default.post(name: Notification.Name(rawValue: kKWOLocationManagerDidChangeAuthorizationStatusNotification), object: nil)
         self.findLocation(withAuthorizationStatus: status)
     }
 
